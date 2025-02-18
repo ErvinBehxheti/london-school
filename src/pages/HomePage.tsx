@@ -1,16 +1,15 @@
 // src/pages/HomePage.tsx
 
 import React from "react";
-import NavBar from "../components/NavBar";
-import Synergy from "../components/Synergy";
-import FeaturedCourses from "../components/FeaturedCourses";
-import Testimonials from "../components/Testimonials";
-import FinalCTA from "../components/FinalCTA";
-import Footer from "../components/Footer";
-import FloatingCTA from "../components/FloatingCTA";
-import Hero from "./Hero/Hero";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import MeetOurTeam from "./MeetOutTeam";
+import NavBar from "../components/HomePage/NavBar";
+import Synergy from "../components/HomePage/Synergy";
+import FeaturedCourses from "../components/HomePage/FeaturedCourses";
+import Testimonials from "../components/HomePage/Testimonials";
+import FinalCTA from "../components/HomePage/FinalCTA";
+import Footer from "../components/HomePage/Footer";
+import { Helmet } from "react-helmet-async";
+import TeamSlider from "../components/HomePage/MeetOutTeam";
+import HeroWithPhoto from "../components/HomePage/Hero";
 
 const HomePage: React.FC = () => {
   // Example data you might keep in a config or environment variables
@@ -72,7 +71,6 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <HelmetProvider>
         <Helmet>
           {/* Primary Meta Tags */}
           <title>London School | Home</title>
@@ -116,13 +114,12 @@ const HomePage: React.FC = () => {
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
-      </HelmetProvider>
 
       {/* Reusable Nav Component with i18n language switch */}
       <NavBar />
 
       <div className="pt-16 w-full overflow-x-hidden">
-        <Hero />
+        <HeroWithPhoto />
         <Synergy />
         <FeaturedCourses />
         <Testimonials />
@@ -141,13 +138,10 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
-        <MeetOurTeam />
+        <TeamSlider />
         <FinalCTA />
         <Footer />
-      </div>
-
-      {/* Floating CTA appears after user scrolls */}
-      <FloatingCTA />
+      </div>      
     </>
   );
 };

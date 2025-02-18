@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FaBeer } from "react-icons/fa";
 import { FaRegSmile } from "react-icons/fa";
-import english from "../illustrations/english.svg";
-import german from "../illustrations/german.svg";
-import programming from "../illustrations/programming.svg";
+import english from "../../illustrations/english.svg";
+import german from "../../illustrations/german.svg";
+import programming from "../../illustrations/programming.svg";
 
 const FeaturedCourses: React.FC = () => {
   return (

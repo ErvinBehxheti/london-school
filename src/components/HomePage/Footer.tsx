@@ -1,6 +1,7 @@
 // src/components/Footer.tsx
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -21,24 +22,24 @@ const Footer: React.FC = () => {
           <h4 className="font-semibold text-white mb-2">Quick Links</h4>
           <ul className="space-y-1">
             <li>
-              <a href="#courses" className="hover:underline">
+              <Link to="/courses" className="hover:underline">
                 Courses
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" className="hover:underline">
+              <Link to="/about" className="hover:underline">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="hover:underline">
+            <Link to="/contact" className="hover:underline">
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#faq" className="hover:underline">
+              <Link to="/faq" className="hover:underline">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

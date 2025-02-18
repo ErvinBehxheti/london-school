@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { resources } from "./resources.ts";
+import { HelmetProvider } from 'react-helmet-async';
 
 i18n.use(initReactI18next).init({
   resources,
@@ -15,9 +16,9 @@ i18n.use(initReactI18next).init({
 });
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+  <HelmetProvider>
+  <App />
+</HelmetProvider>
 );
 
 export default i18n
