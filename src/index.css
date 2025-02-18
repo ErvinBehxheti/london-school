@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import "tailwindcss";
+
+@import 'swiper/css';
+@import 'swiper/css/effect-coverflow';
+@import 'swiper/css/effect-cube';
+@import 'swiper/css/effect-fade';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
+@theme {
+  --color-ls-blue: #003C71;
+  --color-ls-red: #AE1C28
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url("../public/fonts/sf-regular.woff2") format("woff2"),
+       url("../public/fonts/sf-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("../public/fonts/Inter-Regular.woff") format("woff"),
+}
+
+body {
+  font-family: 'SF Pro', 'Inter', sans-serif;
+  background-color: #fff; /* plenty of white space per your design */
+  margin: 0;
+  padding: 0;
+}
+
+.poppins-bold {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
