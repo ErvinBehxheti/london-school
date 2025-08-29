@@ -5,7 +5,6 @@ import NavBar from "../components/HomePage/NavBar";
 import Synergy from "../components/HomePage/Synergy";
 import FeaturedCourses from "../components/HomePage/FeaturedCourses";
 import Testimonials from "../components/HomePage/Testimonials";
-import FinalCTA from "../components/HomePage/FinalCTA";
 import Footer from "../components/HomePage/Footer";
 import { Helmet } from "react-helmet-async";
 import TeamSlider from "../components/HomePage/MeetOutTeam";
@@ -92,7 +91,7 @@ const HomePage: React.FC = () => {
           />
           <meta
             property="og:image"
-            content={`${websiteUrl}/assets/images/og-image.jpg`} 
+            content={`${websiteUrl}/photos/hero-background.jpg`} 
             /* Replace with an actual banner image URL */
           />
           
@@ -123,23 +122,7 @@ const HomePage: React.FC = () => {
         <Synergy />
         <FeaturedCourses />
         <Testimonials />
-        <div className="max-w-5xl mx-auto">
-        
-        {/* Optional 40s video testimonial or campus tour */}
-        <div className="mt-10">
-          <h3 className="text-lg font-semibold text-gray-700 mb-2">Campus Tour</h3>
-          <div className="relative w-full h-0 pb-[56.25%]">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/your-video-id-here"
-              title="London School Tour"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            />
-          </div>
-        </div>
-      </div>
         <TeamSlider />
-        <FinalCTA />
         <Footer />
       </div>      
     </>

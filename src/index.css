@@ -15,17 +15,12 @@
 
 @font-face {
   font-family: 'SF Pro';
-  src: url("../public/fonts/sf-regular.woff2") format("woff2"),
-       url("../public/fonts/sf-medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../public/fonts/Inter-Regular.woff") format("woff"),
+  src: url("/fonts/sf-regular.woff2") format("woff2"),
+       url("/fonts/sf-medium.woff2") format("woff2");
 }
 
 body {
-  font-family: 'SF Pro', 'Inter', sans-serif;
+  font-family: 'SF Pro', sans-serif;
   background-color: #fff; /* plenty of white space per your design */
   margin: 0;
   padding: 0;

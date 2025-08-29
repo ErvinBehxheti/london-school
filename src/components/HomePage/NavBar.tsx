@@ -66,16 +66,6 @@ const NavBar: React.FC = () => {
               <option value="de">German</option>
               <option value="al">Albanian</option>
             </select>
-
-            {/* Optional Enroll Button */}
-            <Link
-              to="/enroll"
-              className="ml-2 bg-ls-red text-white font-semibold px-4 py-2 
-                         rounded-full shadow-md hover:bg-ls-blue 
-                         transition-colors"
-            >
-              {t("enrollBtn") || "Enroll Now"}
-            </Link>
           </div>
 
           {/* MOBILE MENU BUTTON (hamburger) */}
@@ -122,17 +112,6 @@ const NavBar: React.FC = () => {
               <option value="de">German</option>
               <option value="al">Albanian</option>
             </select>
-
-            {/* Optional Enroll Button */}
-            <Link
-              to="/enroll"
-              className="mt-2 bg-ls-red text-white font-semibold px-4 py-2
-                         rounded-full shadow-md hover:bg-ls-blue 
-                         transition-colors text-center"
-              onClick={() => setNavOpen(false)}
-            >
-              {t("enrollBtn") || "Enroll Now"}
-            </Link>
           </div>
         </div>
       )}

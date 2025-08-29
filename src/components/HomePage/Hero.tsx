@@ -29,14 +29,6 @@ const HeroWithPhoto: React.FC = () => {
         <p className="max-w-2xl mx-auto text-lg sm:text-xl font-medium opacity-90 mt-4">
           Experience premium courses and modern learning in Mitrovica, Kosova
         </p>
-
-        {/* CTA Button */}
-        <button
-          className="mt-6 bg-white text-ls-red font-bold text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
-          onClick={() => alert("Enroll Now")}
-        >
-          Enroll Now
-        </button>
       </div>
 
       {/* Bottom Wave Transition */}

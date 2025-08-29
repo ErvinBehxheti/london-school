@@ -193,43 +193,6 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Optional Map or Environment Photos Section */}
-      <section className="max-w-6xl mx-auto py-12 px-4">
-        <motion.h2
-          className="text-2xl font-bold text-ls-red mb-6 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Take a Look Around
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Map embed or a campus photo */}
-          <motion.div
-            className="bg-gray-200 h-64 flex items-center justify-center text-gray-500 text-sm"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {/* Replace with an actual Google Maps iframe or campus photo */}
-            Map or Photo Placeholder
-          </motion.div>
-
-          {/* Additional campus or environment photos */}
-          <motion.div
-            className="bg-gray-200 h-64 flex items-center justify-center text-gray-500 text-sm"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            Another Photo Placeholder
-          </motion.div>
-        </div>
-      </section>
-
       {/* Final CTA for visiting or calling */}
       <section className="w-full bg-ls-blue text-white py-12 px-4 text-center">
         <h2 className="text-2xl font-bold">Come Say Hello!</h2>
@@ -239,7 +202,7 @@ const ContactPage: React.FC = () => {
           to learn and grow.
         </p>
         <p className="mt-2 font-medium">
-          Call: +383 12 345 678 | Email: info@londonschoolkosova.org
+          Call: +383 49 236 888 | Email: info@londonschoolkosova.org
         </p>
         <a
           href="/enroll"
