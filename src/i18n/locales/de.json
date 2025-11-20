@@ -1,0 +1,207 @@
+{
+  "navigation": {
+    "home": "Start",
+    "about": "Über uns",
+    "programs": "Programme", 
+    "contact": "Kontakt",
+    "enrollNow": "Jetzt anmelden"
+  },
+  "hero": {
+    "title": "Premium Bildung",
+    "subtitle": "Seit 2019",
+    "description": "Meistern Sie Englisch, Deutsch und Programmierung mit der London School in Mitrovica. Von TOEFL-Vorbereitung bis zu modernster Programmierung mit unserer Logiscool-Partnerschaft.",
+    "explorePrograms": "Programme entdecken",
+    "scheduleVisit": "Besuch planen",
+    "yearsExcellence": "Jahre der Exzellenz",
+    "studentsGraduated": "Absolventen",
+    "corePrograms": "Hauptprogramme"
+  },
+  "programs": {
+    "badge": "Unsere Programme",
+    "title": "Wählen Sie Ihre Lern",
+    "titleHighlight": "Reise",
+    "description": "Drei umfassende Programme, die darauf ausgelegt sind, Ihr Potenzial in Sprachen und Technologie freizusetzen",
+    "english": {
+      "title": "Englische Sprache",
+      "description": "Meistern Sie Englisch mit unseren umfassenden Kursen für alle Niveaus",
+      "features": {
+        "groupIndividual": "Gruppen- & Einzeltraining",
+        "toefl": "TOEFL-Vorbereitung",
+        "hippo": "Hippo-Wettbewerb",
+        "spelling": "Rechtschreibwettbewerb",
+        "allAges": "Alle Altersgruppen"
+      },
+      "duration": "3-12 Monate",
+      "students": "150+ eingeschrieben"
+    },
+    "german": {
+      "title": "Deutsche Sprache",
+      "description": "Lernen Sie Deutsch mit muttersprachlicher Kompetenz durch unsere strukturierten Programme",
+      "features": {
+        "groupIndividual": "Gruppen- & Einzeltraining",
+        "cultural": "Kulturelle Immersion",
+        "hippo": "Hippo-Wettbewerb",
+        "spelling": "Rechtschreibwettbewerb", 
+        "certification": "Professionelle Zertifizierung"
+      },
+      "duration": "3-12 Monate",
+      "students": "120+ eingeschrieben"
+    },
+    "programming": {
+      "title": "Programmierung & Tech",
+      "description": "Von den Grundlagen bis zur fortgeschrittenen Entwicklung mit branchenüblichen Praktiken",
+      "features": {
+        "webDev": "HTML, CSS, JavaScript",
+        "react": "React-Entwicklung",
+        "custom": "Individuelle Programmierkurse",
+        "logiscool": "Logiscool-Partnerschaft",
+        "blox": "Blox Code für Kinder"
+      },
+      "duration": "6-18 Monate",
+      "students": "200+ eingeschrieben"
+    },
+    "learnMore": "Mehr erfahren",
+    "partnership": {
+      "badge": "Besondere Partnerschaft",
+      "title": "Powered by Logiscool",
+      "description": "Unsere Programmierkurse für Kinder verwenden Blox-Code-Technologie, die das Lernen durch Spieleentwicklung und KI-Projekte unterhaltsam macht.",
+      "exploreKids": "Kinder-Coding entdecken",
+      "successStories": "Erfolgsgeschichten ansehen"
+    }
+  },
+  "about": {
+    "badge": "Über London School",
+    "title": "Zukunft gestalten",
+    "titleHighlight": "Seit 2019",
+    "description": "Gegründet mit der Vision, erstklassige Bildung in Mitrovica zu bieten, ist die London School zu einem Leuchtturm der Exzellenz in Sprach- und Technologiebildung geworden.",
+    "story": {
+      "title": "Unsere Geschichte",
+      "paragraph1": "Die London School wurde 2019 mit einer klaren Mission gegründet: die Lücke zwischen traditioneller Bildung und den Anforderungen der modernen Welt zu schließen. Im Herzen von Mitrovica haben wir eine Lernumgebung geschaffen, in der Schüler in Englisch, Deutsch und Programmierung gedeihen.",
+      "paragraph2": "Unsere Partnerschaft mit Logiscool bringt weltklasse Programmiererziehung zu jungen Lernenden, mit innovativer Blox-Code-Technologie, die das Lernen sowohl unterhaltsam als auch effektiv macht. Von TOEFL-Vorbereitung bis Spieleentwicklung bereiten wir Schüler auf globalen Erfolg vor.",
+      "paragraph3": "Was uns auszeichnet, ist unser Engagement für personalisiertes Lernen. Ob durch Einzelnachhilfe oder dynamische Gruppensessions, wir stellen sicher, dass jeder Schüler die Aufmerksamkeit erhält, die er verdient, um in seinem gewählten Bereich zu glänzen."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Schüler mit den Sprachen und technischen Fähigkeiten zu befähigen, die sie benötigen, um in einer globalen, digital-ersten Welt erfolgreich zu sein, während wir Kreativität, kritisches Denken und kulturelles Bewusstsein fördern.",
+      "recognition": "Anerkannte Exzellenz in der Bildung"
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "description": "Die Prinzipien, die alles leiten, was wir tun",
+      "excellence": {
+        "title": "Exzellenz",
+        "description": "Wir streben nach den höchsten Standards in Bildung und Schülerleistung."
+      },
+      "passion": {  
+        "title": "Leidenschaft",
+        "description": "Unsere Pädagogen sind leidenschaftlich daran interessiert, junge Geister zu inspirieren und zu fördern."
+      },
+      "global": {
+        "title": "Globale Perspektive",
+        "description": "Schüler auf Erfolg in einer vernetzten Welt vorbereiten."
+      },
+      "innovation": {
+        "title": "Innovation", 
+        "description": "Umarmung modernster Lehrmethoden und Technologie."
+      }
+    },
+    "impact": {
+      "title": "Unser Einfluss",
+      "description": "Zahlen, die unser Engagement für Exzellenz widerspiegeln",
+      "graduates": "Absolventen",
+      "graduatesDesc": "Schüler, die ihre Ziele erreicht haben",
+      "successRate": "Erfolgsquote",
+      "successRateDesc": "Bei TOEFL- und Zertifizierungsprüfungen",
+      "teachers": "Expertenlehrer",
+      "teachersDesc": "Qualifizierte und erfahrene Pädagogen",
+      "years": "Jahre",
+      "yearsDesc": "Bildungsexzellenz"
+    }
+  },
+  "team": {
+    "badge": "Unser Team",
+    "title": "Treffen Sie die Menschen hinter",
+    "titleHighlight": "Ihrem Erfolg",
+    "description": "Leidenschaftliche Pädagogen und Innovatoren, die sich der Transformation von Leben durch Bildung widmen",
+    "founder": {
+      "name": "Dr. Maria Johnson",
+      "role": "Gründerin & Direktorin",
+      "bio": "Mit über 15 Jahren Erfahrung in internationaler Bildung gründete Dr. Johnson die London School mit der Vision, erstklassige Sprach- und Technologiebildung nach Mitrovica zu bringen. Ihre Leidenschaft für die Stärkung von Schülern hat unseren innovativen Lernansatz geprägt.",
+      "education": "Promotion in Bildungsleitung, Cambridge University",
+      "achievements": "Partnerschaften mit Logiscool aufgebaut • 500+ Schüler ausgebildet • TOEFL-Experten-Dozent"
+    },
+    "members": {
+      "english": {
+        "name": "Sarah Williams",
+        "role": "Leiterin der Englischprogramme",
+        "bio": "Englische Muttersprachlerin mit CELTA-Zertifizierung und 10 Jahren Erfahrung in TOEFL-Vorbereitung."
+      },
+      "german": {
+        "name": "Klaus Schmidt",
+        "role": "Leiter der Deutschprogramme",
+        "bio": "Deutscher Muttersprachler mit Goethe-Institut-Zertifizierung und Expertise in Sprach-Immersionsprogrammen."
+      },
+      "tech": {
+        "name": "Alex Rivera",
+        "role": "Hauptprogrammierlehrer",
+        "bio": "Full-Stack-Entwickler und Logiscool-zertifizierter Lehrer, spezialisiert darauf, Programmieren für alle Altersgruppen unterhaltsam zu machen."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Kontakt aufnehmen",
+    "title": "Beginnen Sie Ihre Lern",
+    "titleHighlight": "Reise heute",
+    "description": "Bereit, Ihr Potenzial freizusetzen? Kontaktieren Sie uns, um mehr über unsere Programme zu erfahren und den perfekten Kurs für Ihre Ziele zu finden.",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "description": "Füllen Sie das folgende Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "program": "Interessensprogramm",
+      "message": "Nachricht",
+      "selectProgram": "Wählen Sie ein Programm",
+      "englishOption": "Englische Sprache",
+      "germanOption": "Deutsche Sprache",
+      "programmingOption": "Programmierung & Tech",
+      "logiscoolOption": "Logiscool Kinder-Coding",
+      "messagePlaceholder": "Erzählen Sie uns von Ihren Lernzielen und allen Fragen, die Sie haben...",
+      "sendMessage": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "required": "*"
+    },
+    "info": {
+      "visit": {
+        "title": "Besuchen Sie unseren Campus",
+        "info": "Mitrovica, Kosovo",
+        "description": "Sehen Sie unsere modernen Einrichtungen"
+      },
+      "call": {
+        "title": "Rufen Sie uns an",
+        "info": "+383 xx xxx xxx", 
+        "description": "Mo-Fr, 8:00 - 18:00 Uhr"
+      },
+      "email": {
+        "title": "E-Mail an uns",
+        "info": "info@londonschool.edu",
+        "description": "Wir antworten innerhalb von 24 Stunden"
+      },
+      "hours": {
+        "title": "Bürozeiten",
+        "info": "Mo-Fr: 8:00-18:00",
+        "description": "Samstag: 9:00-15:00"
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Reise zu beginnen?",
+      "description": "Schließen Sie sich Hunderten erfolgreicher Schüler an, die ihre Ziele mit der London School erreicht haben. Ihre Zukunft beginnt mit einem einzigen Schritt.",
+      "visitCampus": "Campus-Besuch planen",
+      "downloadBrochure": "Broschüre herunterladen"
+    },
+    "toast": {
+      "success": "Nachricht gesendet!",
+      "successDesc": "Vielen Dank für Ihr Interesse. Wir werden Sie innerhalb von 24 Stunden kontaktieren."
+    }
+  }
+}

@@ -1,33 +1,261 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import 'swiper/css';
-@import 'swiper/css/effect-coverflow';
-@import 'swiper/css/effect-cube';
-@import 'swiper/css/effect-fade';
-@import 'swiper/css/pagination';
-@import 'swiper/css/navigation';
+/* London School Premium Design System - Sophisticated Educational Platform */
 
-@theme {
-  --color-ls-blue: #003C71;
-  --color-ls-red: #AE1C28
+@layer base {
+  :root {
+    /* Premium Color Palette */
+    --background: 0 0% 99%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Deep Academic Blue with Gold Accents */
+    --primary: 221 83% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 221 83% 45%;
+
+    /* Warm Gold for Premium Touch */
+    --secondary: 43 74% 60%;
+    --secondary-foreground: 220 25% 15%;
+
+    /* Subtle Gray Tones */
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 15% 55%;
+
+    /* Success Green for Achievements */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 35%;
+
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 35%), hsl(221 83% 45%), hsl(43 74% 60%));
+    --gradient-card: linear-gradient(145deg, hsla(0, 0%, 100%, 0.9), hsla(220, 13%, 95%, 0.8));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(220 13% 97%));
+
+    /* Premium Shadows */
+    --shadow-premium: 0 20px 40px -10px hsla(221, 83%, 35%, 0.15);
+    --shadow-card: 0 10px 30px -5px hsla(221, 83%, 35%, 0.1);
+    --shadow-glow: 0 0 60px hsla(221, 83%, 45%, 0.3);
+    --shadow-subtle: 0 4px 20px hsla(220, 25%, 15%, 0.08);
+
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode maintains the same premium feel */
+    --background: 220 25% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 221 83% 50%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 221 83% 60%;
+
+    --secondary: 43 74% 65%;
+    --secondary-foreground: 220 25% 8%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 142 76% 45%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 221 83% 50%;
+
+    /* Update gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 40%), hsl(221 83% 50%), hsl(43 74% 65%));
+    --gradient-card: linear-gradient(145deg, hsla(220, 25%, 12%, 0.9), hsla(220, 15%, 15%, 0.8));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(220 15% 10%));
+
+    /* Adjusted shadows for dark mode */
+    --shadow-premium: 0 20px 40px -10px hsla(0, 0%, 0%, 0.3);
+    --shadow-card: 0 10px 30px -5px hsla(0, 0%, 0%, 0.2);
+    --shadow-glow: 0 0 60px hsla(221, 83%, 50%, 0.4);
+    --shadow-subtle: 0 4px 20px hsla(0, 0%, 0%, 0.15);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
-@font-face {
-  font-family: 'SF Pro';
-  src: url("/fonts/sf-regular.woff2") format("woff2"),
-       url("/fonts/sf-medium.woff2") format("woff2");
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+  }
+  
+  html {
+    @apply overflow-x-hidden;
+  }
 }
 
-body {
-  font-family: 'SF Pro', sans-serif;
-  background-color: #fff; /* plenty of white space per your design */
-  margin: 0;
-  padding: 0;
+@layer utilities {
+  /* Premium Animation Classes */
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.7s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  /* Premium Interactive Elements */
+  .premium-card {
+    @apply bg-gradient-to-br from-card to-muted/50;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-premium);
+  }
+
+  .premium-button {
+    @apply relative overflow-hidden;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .premium-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-premium);
+  }
+
+  .premium-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+  }
+
+  .premium-button:hover::before {
+    left: 100%;
+  }
+
+  /* Glass Effect */
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
 }
 
-.poppins-bold {
-  font-family: "Poppins", serif;
-  font-weight: 700;
-  font-style: normal;
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
