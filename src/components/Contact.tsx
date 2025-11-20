@@ -4,14 +4,33 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-
   const { t } = useTranslation();
 
   const contactInfo = [
-    { icon: MapPin, title: t("contact.info.visit.title"), info: t("contact.info.visit.info"), description: t("contact.info.visit.description") },
-    { icon: Phone,  title: t("contact.info.call.title"),  info: t("contact.info.call.info"),  description: t("contact.info.call.description") },
-    { icon: Mail,   title: t("contact.info.email.title"), info: t("contact.info.email.info"), description: t("contact.info.email.description") },
-    { icon: Clock,  title: t("contact.info.hours.title"), info: t("contact.info.hours.info"), description: t("contact.info.hours.description") }
+    {
+      icon: MapPin,
+      title: t("contact.info.visit.title"),
+      info: t("contact.info.visit.info"),
+      description: t("contact.info.visit.description"),
+    },
+    {
+      icon: Phone,
+      title: t("contact.info.call.title"),
+      info: t("contact.info.call.info"),
+      description: t("contact.info.call.description"),
+    },
+    {
+      icon: Mail,
+      title: t("contact.info.email.title"),
+      info: t("contact.info.email.info"),
+      description: t("contact.info.email.description"),
+    },
+    {
+      icon: Clock,
+      title: t("contact.info.hours.title"),
+      info: t("contact.info.hours.info"),
+      description: t("contact.info.hours.description"),
+    },
   ];
 
   return (
@@ -27,8 +46,8 @@ const Contact = () => {
             <span className="block text-primary">Journey Today</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to unlock your potential? Contact us to learn more about our programs 
-            and find the perfect course for your goals.
+            Ready to unlock your potential? Contact us to learn more about our
+            programs and find the perfect course for your goals.
           </p>
         </div>
 
@@ -50,19 +69,42 @@ const Contact = () => {
                     {info.title}
                   </h3>
                   <p className="font-medium text-primary mb-1">{info.info}</p>
-                  <p className="text-sm text-muted-foreground">{info.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {info.description}
+                  </p>
                 </CardContent>
               </Card>
             );
           })}
         </div>
 
-        {/* CTA Section */}
-                <div className="animate-fade-up bg-gradient-to-r from-primary to-primary-glow rounded-3xl p-8 md:p-12 text-white text-center">
-          <h3 className="font-heading font-bold text-3xl mb-4">{t("contact.cta.title")}</h3>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {t("contact.cta.description")}
-          </p>
+        {/* CTA + Map Section */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          {/* CTA */}
+          <div className="animate-fade-up bg-gradient-to-r from-primary to-primary-glow rounded-3xl p-8 md:p-12 text-white text-center">
+            <h3 className="font-heading font-bold text-3xl mb-4">
+              {t("contact.cta.title")}
+            </h3>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              {t("contact.cta.description")}
+            </p>
+          </div>
+
+          {/* Map */}
+          <Card className="premium-card border-0 overflow-hidden animate-fade-up lg:[animation-delay:0.1s]">
+            <CardContent className="p-0 h-full">
+              <div className="h-[280px] md:h-[360px] lg:h-full">
+                <iframe
+                  title="London School Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.26734455247!2d20.867624000000003!3d42.8883059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135345be74d29c69%3A0xd1d95ee51e5bafba!2sLondon%20School!5e0!3m2!1sen!2s!4v1763657972733!5m2!1sen!2s"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

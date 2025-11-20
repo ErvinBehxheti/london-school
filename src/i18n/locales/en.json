@@ -1,137 +1,135 @@
 {
   "navigation": {
     "home": "Home",
-    "about": "About", 
+    "about": "About Us",
     "programs": "Programs",
-    "team": "Teachers",
-    "partners": "Partners",
     "contact": "Contact",
-    "enrollNow": "Enroll Now"
+    "enrollNow": "Apply Now"
   },
   "hero": {
-    "title": "Premium Education",
-    "subtitle": "Since 2019",
-    "description": "Master English, German, and Programming with London School in Mitrovica. From TOEFL preparation to cutting-edge coding with our Logiscool partnership.",
+    "title": "London School",
+    "subtitle": "Helping You Grow and Succeed",
+    "description": "London School is an education center that helps students build strong language and technology skills.",
     "explorePrograms": "Explore Programs",
-    "scheduleVisit": "Schedule Visit",
-    "yearsExcellence": "Years of Excellence",
-    "studentsGraduated": "Students Graduated", 
+    "scheduleVisit": "Contact Us",
+    "yearsExcellence": "Years of Experience",
+    "studentsGraduated": "Students",
     "corePrograms": "Core Programs"
   },
   "programs": {
     "badge": "Our Programs",
     "title": "Choose Your Learning",
     "titleHighlight": "Journey",
-    "description": "Three comprehensive programs designed to unlock your potential in languages and technology",
+    "description": "Three comprehensive programs designed to help you grow in languages and technology.",
     "english": {
       "title": "English Language",
-      "description": "Master English with our comprehensive courses designed for all levels",
+      "description": "From beginner levels to advanced academic and professional English.",
       "features": {
-        "groupIndividual": "Group & Individual Training",
-        "toefl": "TOEFL Preparation", 
-        "hippo": "Hippo Competition",
-        "spelling": "Spelling Bee Competition",
-        "allAges": "All Age Groups"
+        "kids": "Courses for kids, teens and adults",
+        "exams": "Preparation for international exams (IELTS, TOEFL)",
+        "communication": "Strong focus on communication and real-life use",
+        "academic": "Academic writing and skills for work",
+        "allLevels": "All levels available"
       },
-      "duration": "3-12 months",
-      "students": "150+ enrolled"
+      "duration": "Flexible",
+      "students": "150+ students"
     },
     "german": {
       "title": "German Language",
-      "description": "Learn German with native-level fluency through our structured programs",
+      "description": "Learn German for study, work or everyday life.",
       "features": {
-        "groupIndividual": "Group & Individual Training",
-        "cultural": "Cultural Immersion",
-        "hippo": "Hippo Competition", 
-        "spelling": "Spelling Bee Competition",
-        "certification": "Professional Certification"
+        "allLevels": "Courses for all levels (A1–C1)",
+        "exams": "Preparation for official exams (Goethe, TestDaF, ÖSD)",
+        "interactive": "Interactive classes with practical exercises",
+        "daily": "Practice for everyday situations",
+        "certified": "Internationally recognized certificates"
       },
-      "duration": "3-12 months",
-      "students": "120+ enrolled"
+      "duration": "Flexible",
+      "students": "120+ students"
     },
     "programming": {
-      "title": "Programming & Tech",
-      "description": "From basics to advanced development with industry-standard practices",
+      "title": "Programming",
+      "description": "Your first step into the digital world and future careers.",
       "features": {
-        "webDev": "HTML, CSS, JavaScript",
-        "react": "React Development",
-        "custom": "Custom Programming Courses",
-        "logiscool": "Logiscool Partnership",
-        "blox": "Blox Code for Kids"
+        "allAges": "Courses for kids, teens and adults",
+        "games": "Game and app development",
+        "webDev": "Web development",
+        "advanced": "Robotics, artificial intelligence and cybersecurity",
+        "certified": "Internationally recognized certificates"
       },
-      "duration": "6-18 months",
-      "students": "200+ enrolled"
+      "duration": "Flexible",
+      "students": "200+ students"
     },
     "learnMore": "Learn More",
     "partnership": {
       "badge": "Special Partnership",
       "title": "Powered by Logiscool",
-      "description": "Our programming courses for kids feature Blox code technology, making learning fun through game development and AI projects.",
-      "exploreKids": "Explore Kids Coding",
+      "description": "Our programming courses for kids use Blox code technology, making learning fun through game development and AI projects.",
+      "exploreKids": "Explore Coding for Kids",
       "successStories": "View Success Stories"
     }
   },
   "about": {
     "badge": "About London School",
-    "title": "Shaping Futures",
+    "title": "Shaping the Future",
     "titleHighlight": "Since 2019",
-    "description": "London School is your local center for foreign language learning and technology education for children, teenagers, and adults.",
+    "description": "London School is your local center for foreign languages and technology education for children, teenagers and adults.",
     "history": {
-      "title": "Our History",
-      "subtitle": "The journey of London School from 2019 to today",
+      "title": "Our Story",
+      "subtitle": "The journey of London School from 2019 until today",
       "2019": {
         "title": "The Beginning",
-        "description": "London School started as a small language learning center in Mitrovica, founded by English teacher Albina Hoti, to bring quality foreign language education to local youth."
+        "description": "London School started as a small language center in Mitrovica, founded by English teacher Albina Hoti to bring high-quality language education to local youth."
       },
       "2021": {
-        "title": "Growth & Expansion", 
-        "description": "With rapid student growth, we expanded our curriculum with English, German courses and first steps in technology. We introduced small group classes and learning through practical experiences."
+        "title": "Growth & Expansion",
+        "description": "With a fast-growing number of students, we expanded our curriculum with English, German and our first steps in technology. We introduced small group classes and learning through practical activities."
       },
       "2024": {
-        "title": "Partnership with Logiscool",
-        "description": "Recognizing the importance of technology education, we partnered with international school Logiscool to bring international certification in innovative programming courses: Python, JavaScript and Blox, further enriching our academic offerings."
+        "title": "Logiscool Partnership",
+        "description": "Seeing the importance of technology education, we partnered with the international Logiscool school to bring international certification in innovative programming courses: Python, JavaScript and Blox, further enriching our academic offer."
       },
       "today": {
-        "title": "A Thriving Community",
-        "description": "Today, London School welcomes hundreds of students each year, with trained teachers and a modern campus in Mitrovica, a space dedicated to interactive and creative learning."
+        "title": "A Growing Community",
+        "description": "Today, London School welcomes hundreds of students every year, with dedicated teachers and a modern campus in Mitrovica – a space built for interactive and creative learning."
       }
     },
     "whatWeOffer": {
       "title": "What London School Offers",
-      "description": "Interactive methods, experienced teachers, and programs prepared according to international standards. Our mission is to help students gain confidence, practical skills, and opportunities for the future."
+      "description": "Interactive methods, experienced teachers and programs designed according to international standards. Our mission is to help students gain confidence, practical skills and real opportunities for the future."
     },
     "mission": {
       "title": "Our Mission",
-      "description": "To empower students with the languages and technical skills needed to succeed in a global, digital-first world while fostering creativity, critical thinking, and cultural awareness.",
-      "recognition": "Recognized Excellence in Education"
+      "description": "To empower students with the language and technical skills they need to succeed in a digital, global world, while encouraging creativity, critical thinking and cultural awareness.",
+      "recognition": "Recognized for Excellence in Education"
     },
     "values": {
       "title": "Our Values",
       "description": "The principles that guide everything we do",
       "excellence": {
         "title": "Excellence",
-        "description": "We strive for the highest standards in education and student achievement."
+        "description": "We aim for the highest standards in teaching and student achievement."
       },
       "passion": {
-        "title": "Passion", 
-        "description": "Our educators are passionate about inspiring and nurturing young minds."
+        "title": "Passion",
+        "description": "Our educators are passionate about inspiring and supporting learners."
       },
       "global": {
         "title": "Global Perspective",
-        "description": "Preparing students for success in an interconnected world."
+        "description": "Preparing students to succeed in a connected world."
       },
       "innovation": {
         "title": "Innovation",
-        "description": "Embracing cutting-edge teaching methods and technology."
+        "description": "Embracing modern teaching methods and technology."
       }
     },
     "impact": {
       "title": "Our Impact",
-      "description": "Numbers that reflect our commitment to excellence",
+      "description": "Numbers that reflect our dedication to quality",
       "graduates": "Graduates",
-      "graduatesDesc": "Students who achieved their goals",
-      "successRate": "Success Rate", 
-      "successRateDesc": "In TOEFL and certification exams",
+      "graduatesDesc": "Students who reached their goals",
+      "successRate": "Success Rate",
+      "successRateDesc": "In TOEFL and other certification exams",
       "teachers": "Expert Teachers",
       "teachersDesc": "Qualified and experienced educators",
       "years": "Years",
@@ -142,40 +140,89 @@
     "badge": "Our Team",
     "title": "Meet the People Behind",
     "titleHighlight": "Your Success",
-    "description": "Passionate educators and innovators dedicated to transforming lives through education",
+    "description": "A team of dedicated educators and innovators committed to changing lives through education.",
     "founder": {
-      "name": "Dr. Maria Johnson",
+      "name": "Albina Hoti",
       "role": "Founder & Director",
-      "bio": "With over 15 years of experience in international education, Dr. Johnson founded London School with a vision to bring world-class language and technology education to Mitrovica. Her passion for empowering students has shaped our innovative approach to learning.",
-      "education": "PhD in Educational Leadership, Cambridge University",
-      "achievements": "Established partnerships with Logiscool • Trained 500+ students • TOEFL Expert Instructor"
+      "bio": "Albina Hoti is the founder of London School and an educator with a PhD in English. A former lecturer and assistant at the University of Prishtina, she founded London School and opened the first Logiscool center in Mitrovica, advancing language learning, coding and literacy.",
+      "education": "PhD in English Language and Literature, University of Prishtina",
+      "achievements": "Built partnerships with Logiscool • Trained 500+ students • Expert TOEFL instructor"
     },
     "members": {
-      "english": {
-        "name": "Sarah Williams",
-        "role": "Head of English Programs",
-        "bio": "Native English speaker with CELTA certification and 10 years of teaching experience in TOEFL preparation."
+      "adea": {
+        "name": "Adea Baliu",
+        "role": "English Teacher"
       },
-      "german": {
-        "name": "Klaus Schmidt",
-        "role": "Head of German Programs",
-        "bio": "Native German speaker with Goethe Institut certification and expertise in language immersion programs."
+      "aida": {
+        "name": "Aida Topallaj",
+        "role": "English Teacher"
       },
-      "tech": {
-        "name": "Alex Rivera",
-        "role": "Lead Programming Instructor",
-        "bio": "Full-stack developer and Logiscool certified instructor specializing in making coding fun for all ages."
+      "arbnora": {
+        "name": "Arbnora Qorraj",
+        "role": "CEO & Founder"
+      },
+      "ardita-ib": {
+        "name": "Ardita Ibraimi",
+        "role": "English Teacher"
+      },
+      "ardita-jel": {
+        "name": "Ardita Jeliqi",
+        "role": "German Teacher"
+      },
+      "arijana": {
+        "name": "Arijana Uka",
+        "role": "Finance Officer"
+      },
+      "arta": {
+        "name": "Arta Krasniqi",
+        "role": "English Teacher"
+      },
+      "ela": {
+        "name": "Ela Hoti",
+        "role": "Manager & German Teacher"
+      },
+      "ervin": {
+        "name": "Ervin Behxheti",
+        "role": "Coding Trainer"
+      },
+      "fjolla": {
+        "name": "Fjolla Canolli",
+        "role": "Graphic Designer"
+      },
+      "granit": {
+        "name": "Granit Durmishaj",
+        "role": "English Teacher"
+      },
+      "jona": {
+        "name": "Jona Loxha",
+        "role": "Coding Trainer"
+      },
+      "nora": {
+        "name": "Nora Fazliu",
+        "role": "English Teacher"
+      },
+      "rona": {
+        "name": "Rona Peci",
+        "role": "Finance Officer"
+      },
+      "valeriana": {
+        "name": "Valeriana Fejzullahu",
+        "role": "German Teacher"
+      },
+      "valon": {
+        "name": "Valon Sejdiu",
+        "role": "English Teacher"
       }
     }
   },
   "contact": {
-    "badge": "Get In Touch",
+    "badge": "Contact",
     "title": "Start Your Learning",
     "titleHighlight": "Journey Today",
-    "description": "Ready to unlock your potential? Contact us to learn more about our programs and find the perfect course for your goals.",
+    "description": "Ready to invest in your growth? Get in touch to learn more about our programs and find the right course for your goals.",
     "form": {
-      "title": "Send us a Message",
-      "description": "Fill out the form below and we'll get back to you as soon as possible.",
+      "title": "Send Us a Message",
+      "description": "Fill out the form below and we’ll get back to you as soon as possible.",
       "name": "Full Name",
       "email": "Email Address",
       "phone": "Phone Number",
@@ -183,10 +230,10 @@
       "message": "Message",
       "selectProgram": "Select a program",
       "englishOption": "English Language",
-      "germanOption": "German Language", 
-      "programmingOption": "Programming & Tech",
-      "logiscoolOption": "Logiscool Kids Coding",
-      "messagePlaceholder": "Tell us about your learning goals and any questions you have...",
+      "germanOption": "German Language",
+      "programmingOption": "Programming & Technology",
+      "logiscoolOption": "Logiscool Coding for Kids",
+      "messagePlaceholder": "Tell us about your learning goals and any questions you may have...",
       "sendMessage": "Send Message",
       "sending": "Sending...",
       "required": "*"
@@ -195,44 +242,173 @@
       "visit": {
         "title": "Visit Our Campus",
         "info": "Mitrovica, Kosovo",
-        "description": "Come see our modern facilities"
+        "description": "Come and see our modern facilities."
       },
       "call": {
-        "title": "Call Us", 
-        "info": "+383 xx xxx xxx",
-        "description": "Mon-Fri, 8:00 AM - 6:00 PM"
+        "title": "Call Us",
+        "info": "+383 49 236 888",
+        "description": "Mon–Fri, 9:00 – 20:30"
       },
       "email": {
         "title": "Email Us",
-        "info": "info@londonschool.edu",
-        "description": "We respond within 24 hours"
+        "info": "londonschooloffice@gmail.com",
+        "description": "We reply within 24 hours."
       },
       "hours": {
         "title": "Office Hours",
-        "info": "Mon-Fri: 8:00-18:00", 
-        "description": "Saturday: 9:00-15:00"
+        "info": "Mon–Fri: 9:00–20:30",
+        "description": "Saturday: 10:00–14:00"
       }
     },
     "cta": {
       "title": "Ready to Begin Your Journey?",
-      "description": "Join hundreds of successful students who have achieved their goals with London School. Your future starts with a single step.",
-      "visitCampus": "Schedule Campus Visit",
-      "downloadBrochure": "Download Brochure"
+      "description": "Join hundreds of successful students who achieved their goals with London School. Your future starts with one step."
     },
     "toast": {
       "success": "Message Sent!",
-      "successDesc": "Thank you for your interest. We'll contact you within 24 hours."
+      "successDesc": "Thank you for your interest. We’ll contact you within 24 hours."
     }
   },
   "registration": {
-    "title": "Early-Bird Registration",
-    "description": "Register now and get special enrollment benefits! Fill out the form below and we'll contact you with details about our programs.",
+    "title": "Registration with Special Offer",
+    "description": "Register now and receive special benefits! Fill out the form below and we’ll contact you with more details about our programs.",
     "ageGroup": "Age Group",
-    "selectAge": "Select your age group",
-    "earlyBird": "🎉 Early-Bird Offer!",
-    "earlyBirdDesc": "Register this month and receive 10% discount on your first course enrollment.",
+    "selectAge": "Select age group",
+    "earlyBird": "🎉 Early Bird Offer!",
+    "earlyBirdDesc": "Register this month and get 10% off your first course.",
     "submit": "Complete Registration",
     "success": "Registration Received!",
-    "successDesc": "Thank you for registering! We'll contact you within 24 hours with more information about your selected program."
+    "successDesc": "Thank you for registering! We’ll contact you within 24 hours with more information about your selected program.",
+    "age": {
+      "kids": "Kids (5–7)",
+      "juniors": "Juniors (8–12)",
+      "teens": "Teens (13–17)",
+      "adults": "Adults (18+)"
+    }
+  },
+  "partners": {
+    "badge": "Our Partners",
+    "title": "Organizations We",
+    "titleHighlight": "Collaborate With",
+    "description": "Partnerships that create new opportunities for our students."
+  },
+  "benefits": {
+    "badge": "Extra Benefits",
+    "title": "More Than Just",
+    "titleHighlight": "Education",
+    "description": "Exclusive advantages for London School students and staff.",
+    "scholarship": {
+      "title": "Scholarships",
+      "description": "Financial support for outstanding students."
+    },
+    "internship": {
+      "title": "Internships",
+      "description": "Practical experience with partner companies."
+    },
+    "partnerBenefits": {
+      "title": "Partner Benefits",
+      "description": "Discounts and exclusive offers."
+    },
+    "competitions": {
+      "title": "Local & International Competitions",
+      "description": "Participation in recognized contests."
+    },
+    "summerCamps": {
+      "title": "Summer Camps",
+      "description": "Intensive programs during the summer."
+    },
+    "workshops": {
+      "title": "Workshops",
+      "description": "Specialized trainings and seminars."
+    },
+    "businessClass": {
+      "title": "Business Class",
+      "description": "Courses focused on business skills."
+    },
+    "readingClub": {
+      "title": "Reading Club",
+      "description": "A space for reading and discussions."
+    },
+    "speakingClub": {
+      "title": "Speaking Club",
+      "description": "Group speaking practice."
+    },
+    "techFest": {
+      "title": "Tech Fest",
+      "description": "Our annual technology festival."
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our Students",
+    "titleHighlight": "and Parents Say",
+    "description": "Hear the experiences of our London School families."
+  },
+  "gallery": {
+    "badge": "Gallery",
+    "title": "Life at",
+    "titleHighlight": "London School",
+    "description": "Explore our classrooms, activities and modern spaces.",
+    "classrooms": "Classrooms",
+    "activities": "Activities",
+    "events": "Events"
+  },
+  "jobs": {
+    "badge": "Careers",
+    "title": "Join",
+    "titleHighlight": "Our Team",
+    "description": "We are always looking for new talent to join our team.",
+    "applyEmail": "Apply by sending your CV to:",
+    "positions": {
+      "englishTeacher": {
+        "title": "English Teacher",
+        "requirements": "TEFL/CELTA certification and teaching experience."
+      },
+      "germanTeacher": {
+        "title": "German Teacher",
+        "requirements": "Native speaker or C2 certification, plus teaching experience."
+      },
+      "programmingTeacher": {
+        "title": "Programming Instructor",
+        "requirements": "Experience in programming, ideally with teaching experience."
+      },
+      "admin": {
+        "title": "Administrative Assistant",
+        "requirements": "Strong organizational skills and good English."
+      },
+      "maintenance": {
+        "title": "Maintenance Staff",
+        "requirements": "Experience in building and facility maintenance."
+      }
+    },
+    "applyNow": "Apply Now"
+  },
+  "brand": {
+    "initials": "LS",
+    "name": "London School",
+    "since": "Since 2019"
+  },
+  "aria": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "index": {
+    "earlyBird": {
+      "title": "Register Now!",
+      "description": "Get 10% off your first course when you register this month.",
+      "applyCta": "Apply for Special Offer"
+    },
+    "redirect": {
+      "team": {
+        "meet": "Meet Our Team",
+        "discover": "Learn more about the people supporting your success.",
+        "view": "View Team"
+      },
+      "programs": {
+        "explore": "View All Programs",
+        "discover": "Learn about our language and coding courses.",
+        "view": "View Programs"
+      }
+    }
   }
 }

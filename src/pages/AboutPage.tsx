@@ -6,8 +6,14 @@ import JobOpenings from "@/components/JobOpenings";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const AboutPage = () => {
+
+    useEffect(() => {
+      window.scrollTo({top: 0, behavior: "smooth"})
+    }, [])
+
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Header />

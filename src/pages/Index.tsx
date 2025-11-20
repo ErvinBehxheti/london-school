@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -8,24 +8,27 @@ import Benefits from "@/components/Benefits";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import RegistrationModal from "@/components/RegistrationModal";
-import {  Users, BookOpen, ArrowRight } from "lucide-react";
+import { Users, BookOpen, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Index = () => {
   const [showRegistration, setShowRegistration] = useState(false);
   const { t } = useTranslation();
 
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "smooth"})
+  }, [])
+
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
       <Programs />
-      
 
       <Partners />
       <Benefits />
       <About />
-      
+
       {/* Discover More Section */}
       <section className="py-20 bg-gradient-to-br from-background via-accent/5 to-background">
         <div className="container mx-auto px-6 max-w-7xl">
@@ -45,7 +48,8 @@ const Index = () => {
                     {t("index.redirect.team.discover")}
                   </p>
                   <div className="flex items-center text-primary font-semibold group-hover:gap-4 gap-2 transition-all">
-                    {t("index.redirect.team.view")} <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    {t("index.redirect.team.view")}{" "}
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
               </div>
@@ -66,7 +70,8 @@ const Index = () => {
                     {t("index.redirect.programs.discover")}
                   </p>
                   <div className="flex items-center text-primary font-semibold group-hover:gap-4 gap-2 transition-all">
-                    {t("index.redirect.programs.view")} <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    {t("index.redirect.programs.view")}{" "}
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
               </div>
@@ -76,10 +81,10 @@ const Index = () => {
       </section>
 
       <Contact />
-      
-      <RegistrationModal 
-        open={showRegistration} 
-        onOpenChange={setShowRegistration} 
+
+      <RegistrationModal
+        open={showRegistration}
+        onOpenChange={setShowRegistration}
       />
     </main>
   );

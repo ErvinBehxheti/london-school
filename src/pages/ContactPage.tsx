@@ -4,8 +4,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import JobOpenings from "@/components/JobOpenings";
+import { useEffect } from "react";
 
 const ContactPage = () => {
+
+    useEffect(() => {
+      window.scrollTo({top: 0, behavior: "smooth"})
+    }, [])
+
   return (
     <main className="min-h-screen">
       <Header />
@@ -33,32 +39,6 @@ const ContactPage = () => {
       <Contact />
       
       {/* Map/Location Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-heading font-bold text-3xl mb-4">Visit Our Campus</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Located in the heart of Mitrovica, our modern campus provides the perfect environment for learning and growth.
-            </p>
-          </div>
-          
-          <div className="bg-muted/50 rounded-3xl p-8 md:p-12 text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <MapPin className="w-8 h-8 text-primary" />
-              </div>
-            </div>
-            <h3 className="font-heading font-bold text-2xl mb-4">London School Campus</h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Mitrovica, Kosovo<br />
-              Modern facilities with state-of-the-art classrooms and technology
-            </p>
-            <Button className="premium-button text-white font-semibold">
-              Get Directions
-            </Button>
-          </div>
-        </div>
-      </section>
     </main>
   );
 };
