@@ -121,10 +121,10 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
                 <SelectValue placeholder={t("registration.selectAge")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="kids">Kids (5-7)</SelectItem>
-                <SelectItem value="juniors">Juniors (8-12)</SelectItem>
-                <SelectItem value="teens">Teens (13-17)</SelectItem>
-                <SelectItem value="adults">Adults (18+)</SelectItem>
+                <SelectItem value="kids">{t("registration.age.kids")}</SelectItem>
+                <SelectItem value="juniors">{t("registration.age.juniors")}</SelectItem>
+                <SelectItem value="teens">{t("registration.age.teens")}</SelectItem>
+                <SelectItem value="adults">{t("registration.age.adults")}</SelectItem>
               </SelectContent>
             </Select>
           </div>

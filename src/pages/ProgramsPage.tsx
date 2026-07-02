@@ -1,5 +1,11 @@
+import { motion } from "framer-motion";
+import { CheckCircle, Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
+import PageHero from "@/components/shared/PageHero";
 import Programs from "@/components/Programs";
+import ContactCTA from "@/components/ContactCTA";
+import SplitTextHeading from "@/components/shared/SplitTextHeading";
 import {
   Card,
   CardContent,
@@ -8,126 +14,84 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, CheckCircle, Star } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { SUCCESS_STORIES } from "@/data/testimonials";
+import { cardVariant, stagger } from "@/lib/animations";
 
 const ProgramsPage = () => {
-
-    useEffect(() => {
-      window.scrollTo({top: 0, behavior: "smooth"})
-    }, [])
-
-  const testimonials = [
-    {
-      name: "Ana Berisha",
-      program: "English TOEFL",
-      score: "105/120",
-      quote:
-        "London School's TOEFL preparation helped me achieve my dream score and get into university abroad!",
-      rating: 5,
-    },
-    {
-      name: "Arsim Kabashi",
-      program: "Programming",
-      achievement: "React Developer",
-      quote:
-        "The programming course gave me real-world skills. I'm now working as a frontend developer!",
-      rating: 5,
-    },
-    {
-      name: "Petrit Kutllovci",
-      program: "German Language",
-      achievement: "B2 Certified",
-      quote:
-        "Excellent teachers and method. I can now confidently communicate in German for business.",
-      rating: 5,
-    },
-  ];
+  const { t } = useTranslation();
 
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Header />
-
-      {/* Page Header */}
-      <section className="pt-32 pb-16 bg-gradient-primary">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <Link
-              to="/"
-              className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
-            >
-              <ArrowLeft className="mr-2 w-4 h-4" />
-              Back to Home
-            </Link>
-            <h1 className="font-heading font-bold text-4xl md:text-6xl mb-6">
-              Our Programs
-            </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Comprehensive courses designed to unlock your potential in
-              languages and technology.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("programs.badge")}
+        title={t("pages.programs.title")}
+        description={t("pages.programs.description")}
+      />
 
       <Programs />
 
-      {/* Success Stories */}
-      <section className="py-24 bg-background">
+      {/* Success stories */}
+      <section className="bg-background py-24">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
-              Success Stories
+          <div className="mb-16 text-center">
+            <Badge className="mb-4 border-accent/20 bg-accent/10 text-accent">
+              {t("testimonials.success.badge")}
             </Badge>
-            <h2 className="font-heading font-bold text-4xl mb-6">
-              What Our Students Say
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real achievements from real students who transformed their futures
-              with London School.
+            <SplitTextHeading
+              text={t("testimonials.success.title")}
+              className="display-sub font-heading font-extrabold text-foreground"
+            />
+            <p className="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground">
+              {t("testimonials.success.description")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="premium-card border-0 animate-fade-up"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant="outline">{testimonial.program}</Badge>
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-secondary text-secondary"
-                        />
-                      ))}
+          <motion.div
+            className="grid grid-cols-1 gap-8 md:grid-cols-3"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+          >
+            {SUCCESS_STORIES.map((story) => (
+              <motion.div key={story.key} variants={cardVariant}>
+                <Card className="premium-card h-full border-0">
+                  <CardHeader>
+                    <div className="mb-2 flex items-center justify-between">
+                      <Badge variant="outline">
+                        {t(`testimonials.success.${story.key}.program`)}
+                      </Badge>
+                      <div className="flex">
+                        {[...Array(story.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-4 w-4 fill-secondary text-secondary"
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  <CardTitle className="font-heading text-lg">
-                    {testimonial.name}
-                  </CardTitle>
-                  <CardDescription className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-accent mr-2" />
-                    {testimonial.score || testimonial.achievement}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground italic">
-                    "{testimonial.quote}"
-                  </p>
-                </CardContent>
-              </Card>
+                    <CardTitle className="font-heading text-lg">
+                      {t(`testimonials.success.${story.key}.name`)}
+                    </CardTitle>
+                    <CardDescription className="flex items-center">
+                      <CheckCircle className="mr-2 h-4 w-4 text-accent" />
+                      {t(`testimonials.success.${story.key}.achievement`)}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="italic text-muted-foreground">
+                      “{t(`testimonials.success.${story.key}.quote`)}”
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Upcoming Classes */}
+      <ContactCTA />
     </main>
   );
 };

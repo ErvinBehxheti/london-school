@@ -1,22 +1,22 @@
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import PageHero from "@/components/shared/PageHero";
-import Contact from "@/components/Contact";
+import JobOpenings from "@/components/JobOpenings";
 
-const ContactPage = () => {
+const JobsPage = () => {
   const { t } = useTranslation();
 
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Header />
       <PageHero
-        eyebrow={t("contact.badge")}
-        title={t("pages.contact.title")}
-        description={t("pages.contact.description")}
+        eyebrow={t("jobs.badge")}
+        title={t("pages.jobs.title")}
+        description={t("pages.jobs.description")}
       />
-      <Contact />
+      <JobOpenings />
     </main>
   );
 };
 
-export default ContactPage;
+export default JobsPage;

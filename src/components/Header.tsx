@@ -5,6 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+const NAV_ITEMS = [
+  { nameKey: "navigation.home", path: "/" },
+  { nameKey: "navigation.about", path: "/about" },
+  { nameKey: "navigation.programs", path: "/programs" },
+  { nameKey: "navigation.activities", path: "/activities" },
+  { nameKey: "navigation.gallery", path: "/gallery" },
+  { nameKey: "navigation.contact", path: "/contact" },
+];
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,18 +27,17 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { nameKey: "navigation.home", path: "/" },
-    { nameKey: "navigation.about", path: "/about" },
-    { nameKey: "navigation.programs", path: "/programs" },
-    { nameKey: "navigation.contact", path: "/contact" },
-  ];
+  // Every page opens on a dark hero, so links are light until the header
+  // condenses into its scrolled glass state.
+  const linkTone = isScrolled
+    ? "text-foreground hover:text-primary"
+    : "text-ink-foreground hover:text-secondary";
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "glass-effect shadow-subtle backdrop-blur-md"
+          ? "bg-background/85 shadow-subtle backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -41,33 +49,46 @@ const Header = () => {
             className="flex items-center space-x-3"
             aria-label={t("brand.name")}
           >
-            <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center overflow-hidden">
+            <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-gradient-primary">
               <img
-                src={"/photos/logos/londonschool.png"}
+                src="/photos/logos/londonschool.png"
                 alt={t("brand.name")}
-                className="w-full h-full object-contain"
+                className="h-full w-full object-contain"
               />
             </div>
             <div>
-              <h1 className="font-heading font-bold text-xl text-foreground">
+              <p
+                className={`font-heading text-xl font-bold ${
+                  isScrolled ? "text-foreground" : "text-ink-foreground"
+                }`}
+              >
                 {t("brand.name")}
-              </h1>
-              <p className="text-xs text-muted-foreground">
+              </p>
+              <p
+                className={`text-xs ${
+                  isScrolled
+                    ? "text-muted-foreground"
+                    : "text-ink-foreground/60"
+                }`}
+              >
                 {t("brand.since")}
               </p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+          {/* Desktop navigation */}
+          <div className="hidden items-center space-x-7 lg:flex">
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-medium transition-colors duration-300 ${
+                data-active={location.pathname === item.path}
+                className={`nav-underline text-sm font-medium transition-colors duration-300 ${
                   location.pathname === item.path
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                    ? isScrolled
+                      ? "text-primary"
+                      : "text-secondary"
+                    : linkTone
                 }`}
               >
                 {t(item.nameKey)}
@@ -76,37 +97,37 @@ const Header = () => {
             <LanguageSwitcher />
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
-              className="premium-button text-white font-semibold px-6"
+              className="premium-button px-6 font-semibold text-white"
               onClick={() => navigate("/contact")}
             >
               {t("navigation.enrollNow")}
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className={`p-2 lg:hidden ${
+              isScrolled ? "text-foreground" : "text-ink-foreground"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={
               isMobileMenuOpen ? t("aria.closeMenu") : t("aria.openMenu")
             }
-            title={isMobileMenuOpen ? t("aria.closeMenu") : t("aria.openMenu")}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </nav>
 
-        {/* Mobile Menu */}
+        {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-4 glass-effect rounded-xl p-6 animate-fade-in">
-            {navItems.map((item) => (
+          <div className="animate-fade-in mt-4 space-y-4 rounded-xl bg-background/95 p-6 shadow-premium backdrop-blur-md lg:hidden">
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
@@ -120,9 +141,15 @@ const Header = () => {
                 {t(item.nameKey)}
               </Link>
             ))}
-            <div className="flex flex-col space-y-4 mt-4">
+            <div className="mt-4 flex flex-col space-y-4">
               <LanguageSwitcher />
-              <Button className="premium-button text-white font-semibold w-full">
+              <Button
+                className="premium-button w-full font-semibold text-white"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  navigate("/contact");
+                }}
+              >
                 {t("navigation.enrollNow")}
               </Button>
             </div>

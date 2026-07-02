@@ -39,15 +39,14 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-up">
           <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-            Get In Touch
+            {t("contact.badge")}
           </Badge>
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6">
-            Start Your Learning
-            <span className="block text-primary">Journey Today</span>
+            {t("contact.title")}
+            <span className="block text-primary">{t("contact.titleHighlight")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to unlock your potential? Contact us to learn more about our
-            programs and find the perfect course for your goals.
+            {t("contact.description")}
           </p>
         </div>
 

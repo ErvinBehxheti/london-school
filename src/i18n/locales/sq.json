@@ -1,73 +1,219 @@
 {
+  "common": {
+    "backHome": "Kthehu te Fillimi",
+    "loading": "Duke u ngarkuar…"
+  },
   "navigation": {
     "home": "Fillimi",
     "about": "Rreth Nesh",
     "programs": "Programet",
+    "activities": "Aktivitetet",
+    "gallery": "Galeria",
     "contact": "Kontakti",
     "enrollNow": "Apliko Tani"
   },
   "hero": {
+    "eyebrow": "Shkollë Gjuhësh & Teknologjie — Mitrovicë",
     "title": "London School",
-    "subtitle": "Institucioni që Ndihmon Zhvillimin Tuaj",
-    "description": "London School është institucion arsimor që ndihmon studentët në zhvillimin e aftësive gjuhësore dhe teknologjike",
+    "tagline": "The place to be",
+    "description": "London School është institucion arsimor që ndihmon studentët në zhvillimin e aftësive gjuhësore dhe teknologjike.",
     "explorePrograms": "Eksploro Programet",
-    "scheduleVisit": "Kontaktoni",
+    "scheduleVisit": "Planifiko një Vizitë",
+    "scrollHint": "Lëviz për të zbuluar",
+    "badge": "Tech Fest-i i parë në Mitrovicë — 2025",
     "yearsExcellence": "Vite Përvojë",
     "studentsGraduated": "Studentë",
     "corePrograms": "Programe Kryesore"
+  },
+  "aboutIntro": {
+    "eyebrow": "Kush Jemi",
+    "title": "Duke ndërtuar të ardhmen që nga 2019",
+    "mission": "Ne i ndihmojmë fëmijët, të rinjtë dhe të rriturit të fitojnë aftësi të forta gjuhësore dhe teknologjike — me metoda interaktive, standarde ndërkombëtare dhe një komunitet që feston çdo sukses.",
+    "readStory": "Lexo historinë tonë",
+    "stats": {
+      "years": "Vite Aktive",
+      "graduates": "Studentë të Diplomuar",
+      "programs": "Programe",
+      "staff": "Anëtarë të Stafit"
+    }
   },
   "programs": {
     "badge": "Programet Tona",
     "title": "Zgjidh Udhëtimin Tënd të",
     "titleHighlight": "Mësimit",
-    "description": "Tre programe gjithëpërfshirëse të dizajnuara për të shfrytëzuar potencialin tuaj në gjuhë dhe teknologji",
+    "description": "Tre programe gjithëpërfshirëse të dizajnuara për të shfrytëzuar potencialin tuaj në gjuhë dhe teknologji.",
+    "explore": "Eksploro",
     "english": {
       "title": "Gjuha Angleze",
-      "description": "Nga nivelet fillestare deri tek avancimi akademik dhe profesional",
+      "description": "Nga nivelet fillestare deri tek avancimi akademik dhe profesional.",
       "features": {
         "kids": "Kurse për fëmijë, të rinj dhe të rritur",
         "exams": "Përgatitje për provime ndërkombëtare (IELTS, TOEFL)",
         "communication": "Fokus në komunikim praktik",
         "academic": "Shkrim akademik dhe aftësi për punë",
         "allLevels": "Të gjitha nivelet"
-      },
-      "duration": "Fleksibël",
-      "students": "150+ studentë"
+      }
     },
     "german": {
       "title": "Gjuha Gjermane",
-      "description": "Mëso gjermanisht për studime ose punë",
+      "description": "Mëso gjermanisht për studime ose punë.",
       "features": {
         "allLevels": "Kurse për të gjitha nivelet (A1–C1)",
         "exams": "Përgatitje për provime zyrtare (Goethe, TestDaF, ÖSD)",
         "interactive": "Mësim interaktiv dhe ushtrime praktike",
         "daily": "Ushtrime për situata të përditshme",
         "certified": "Certifikime ndërkombëtare"
-      },
-      "duration": "Fleksibël",
-      "students": "120+ studentë"
+      }
     },
     "programming": {
       "title": "Programim",
-      "description": "Hapi drejt botës digjitale dhe karrierave të së ardhmes",
+      "description": "Hapi drejt botës digjitale dhe karrierave të së ardhmes.",
       "features": {
         "allAges": "Kurse për fëmijë dhe të rritur",
         "games": "Programim lojërash dhe aplikacionesh",
         "webDev": "Web development",
         "advanced": "Robotikë, inteligjencë artificiale dhe siguri kibernetike",
         "certified": "Certifikata të njohura ndërkombëtarisht"
-      },
-      "duration": "Fleksibël",
-      "students": "200+ studentë"
+      }
     },
-    "learnMore": "Mëso Më Shumë",
     "partnership": {
       "badge": "Partneritet Special",
       "title": "Mundësuar nga Logiscool",
       "description": "Kurset tona të programimit për fëmijë përdorin teknologjinë Blox code, duke e bërë mësimin argëtues përmes zhvillimit të lojërave dhe projekteve AI.",
-      "exploreKids": "Eksploro Kodimin për Fëmijë",
-      "successStories": "Shiko Historitë e Suksesit"
+      "exploreKids": "Eksploro Kodimin për Fëmijë"
     }
+  },
+  "activities": {
+    "badge": "Aktivitetet",
+    "title": "Mësimi përtej klasës",
+    "dragHint": "Lëviz për të eksploruar",
+    "viewMore": "Shiko Më Shumë",
+    "pageTitle": "Aktivitetet Tona",
+    "pageDescription": "Kampe, gara, festivale dhe udhëtime — përvojat që e bëjnë London School më shumë se një shkollë.",
+    "photosComingSoon": "Fotot vijnë së shpejti",
+    "summerCamp": {
+      "title": "Kampi Veror",
+      "badge": "Viti i 6-të",
+      "tagline": "Edukim, kreativitet, teknologji dhe argëtim — gjashtë vera me radhë.",
+      "description": "Kampi ynë Veror bashkon edukimin, kreativitetin, teknologjinë dhe argëtimin për të gjashtin vit radhazi. Çdo verë, nxënësit kalojnë javë të paharrueshme duke mësuar gjuhë, koduar, luajtur dhe krijuar miqësi të reja.",
+      "point1": "Punëtori gjuhësh, kodimi dhe kreativiteti",
+      "point2": "Lojëra në natyrë, sport dhe sfida ekipore",
+      "point3": "I hapur për fëmijë, juniorë dhe të rinj"
+    },
+    "bakeAndSale": {
+      "title": "Bake & Sale",
+      "badge": "Komuniteti",
+      "tagline": "Nxënësit pjekin, shesin dhe i kthejnë komunitetit.",
+      "description": "Bake & Sale është një nga traditat tona më të dashura: nxënësit planifikojnë, pjekin dhe shesin ëmbëlsirat e tyre, duke mësuar punën në ekip, buxhetimin dhe përgjegjësinë, ndërsa mbështesin kauza të mira.",
+      "point1": "Planifikim dhe buxhetim në praktikë",
+      "point2": "Punë ekipore mes të gjitha moshave",
+      "point3": "Të ardhurat mbështesin projektet e nxënësve"
+    },
+    "spellingBee": {
+      "title": "Spelling Bee",
+      "badge": "Garë",
+      "tagline": "Gara jonë klasike e drejtshkrimit në anglisht.",
+      "description": "Spelling Bee i sfidon nxënësit të shqiptojnë rrugën drejt majës. Ndërton fjalor, besim në skenë dhe një shije të shëndetshme për garë miqësore.",
+      "point1": "Përmirëson fjalorin dhe shqiptimin",
+      "point2": "Ndërton besim para publikut",
+      "point3": "Çmime për çdo kategori moshe"
+    },
+    "speedTyping": {
+      "title": "Speed Typing",
+      "badge": "Garë",
+      "tagline": "Gishta të shpejtë, mendje të fokusuara.",
+      "description": "Gara jonë Speed Typing i kthen aftësitë e tastierës në sport. Nxënësit garojnë me kohën — saktësia e para, shpejtësia e dyta — dhe fitojnë një aftësi për gjithë jetën.",
+      "point1": "Aftësi digjitale praktike për shkollë dhe punë",
+      "point2": "Saktësi dhe fokus nën presionin e kohës",
+      "point3": "Renditje live dhe shpërblime"
+    },
+    "quizzes": {
+      "title": "Kuize",
+      "badge": "Sfidë",
+      "tagline": "Beteja njohurish të përgjithshme mes ekipeve.",
+      "description": "Netët tona të kuizit vendosin ekipet përballë njëra-tjetrës në gjuhë, shkencë, kulturë dhe teknologji. Të shpejta, të zhurmshme dhe çuditërisht edukative.",
+      "point1": "Frymë ekipore dhe mendim i shpejtë",
+      "point2": "Pyetje nga gjuhët, kultura dhe teknologjia",
+      "point3": "Të hapura për të gjitha nivelet dhe moshat"
+    },
+    "techFest": {
+      "title": "Tech Fest",
+      "badge": "Edicioni i 2-të",
+      "tagline": "Festivali i parë i teknologjisë në Mitrovicë — 1,000+ vizitorë."
+    },
+    "trips": {
+      "title": "Udhëtime Edukative",
+      "badge": "Udhëtime",
+      "tagline": "Nga Roma dhe Vjena deri te Wave Camp në Jalë.",
+      "description": "Mësimi vazhdon shumë përtej klasës. Nga kryeqytetet evropiane deri te Riviera Shqiptare, çdo udhëtim bëhet një përvojë që nxënësit tanë nuk e harrojnë kurrë.",
+      "items": {
+        "rome": {
+          "title": "Roma, Itali",
+          "description": "Një udhëtim nëpër historinë antike, artin dhe kulturën e Qytetit të Përjetshëm."
+        },
+        "vienna": {
+          "title": "Vjena, Austri",
+          "description": "Duke eksploruar pallatet perandorake, muzetë dhe gjuhën gjermane në jetën reale."
+        },
+        "jale": {
+          "title": "Jale Wave Camp",
+          "description": "Shkolla e parë në Kosovë që i çoi nxënësit në Wave Camp në Jalë — diell, det dhe frymë ekipore."
+        },
+        "zoo": {
+          "title": "Dita në Zoo",
+          "description": "Një dalje argëtuese lokale ku nxënësit më të vegjël mësojnë nga afër për kafshët."
+        },
+        "cinema": {
+          "title": "Udhëtime në Kinema",
+          "description": "Ditë filmash që e kthejnë kinemanë në praktikë gjuhësore dhe argëtim të përbashkët."
+        }
+      }
+    },
+    "training": {
+      "title": "Trajnime & Pjesëmarrje",
+      "badge": "Përtej Shkollës",
+      "description": "Nxënësit dhe mësuesit tanë janë kudo ku ndodh mësimi — panaire, festivale dhe programe trajnimi anembanë Kosovës.",
+      "items": {
+        "ibcmFair": {
+          "title": "Panairi IBCM",
+          "description": "Prezantimi i London School dhe lidhja me studentët në panairin e arsimit IBCM."
+        },
+        "kosict": {
+          "title": "KosICT",
+          "description": "Pjesëmarrje në konferencën më të madhe të teknologjisë në Kosovë për të qëndruar në krye të zhvillimeve digjitale."
+        },
+        "youthEmpowerment": {
+          "title": "Youth Empowerment",
+          "description": "Punëtori dhe programe që ndërtojnë lidership dhe aftësi jetësore për të rinjtë."
+        },
+        "aabFair": {
+          "title": "Panairi AAB",
+          "description": "Pjesëmarrje në panairin e Kolegjit AAB për të eksploruar mundësitë në arsimin e lartë."
+        }
+      }
+    }
+  },
+  "techFest": {
+    "label": "Tech Fest",
+    "eyebrow": "Festivali i parë i teknologjisë në Mitrovicë",
+    "title": "Ku Mitrovica takon të ardhmen",
+    "description": "Në vitin 2025, London School organizoi festivalin e parë të teknologjisë që Mitrovica kishte parë ndonjëherë — një ditë e tërë me ligjërata, punëtori, robotë, lojëra dhe ide që bashkuan gjithë qytetin.",
+    "stats": {
+      "visitors": "Vizitorë në edicionin e parë",
+      "firstValue": "I 1-ri",
+      "first": "Festival teknologjie në Mitrovicë"
+    },
+    "quote": "Nuk dukej si një aktivitet shkolle — dukej si e ardhmja që mbërriti në qytetin tonë.",
+    "quoteAuthor": "Vizitor i Tech Fest 2025",
+    "nextEdition": "Edicioni i 2-të — Maj 2026",
+    "editionHeld": "Edicioni i 2-të u mbajt — Maj 2026",
+    "countdown": {
+      "days": "Ditë",
+      "hours": "Orë",
+      "minutes": "Minuta",
+      "seconds": "Sekonda"
+    },
+    "cta": "Eksploro Tech Fest"
   },
   "about": {
     "badge": "Rreth London School",
@@ -138,165 +284,190 @@
   },
   "team": {
     "badge": "Ekipi Ynë",
-    "title": "Takoni Njerëzit Pas",
-    "titleHighlight": "Suksesit Tuaj",
-    "description": "Edukatorë dhe inovatorë të pasionuar të përkushtuar për transformimin e jetëve nëpërmjet arsimit",
+    "spotlightTitle": "Mësuesit tanë janë zemra e programeve tona",
+    "joinTeam": "Bashkohu me Ekipin Tonë",
     "founder": {
       "name": "Albina Hoti",
       "role": "Themeluesja & Drejtoresha",
       "bio": "Albina Hoti është themeluese dhe edukatore me doktoratë në Gjuhën Angleze. Ish-mësuese dhe asistente në UP, themeloi London School dhe nisi Logiscool-in e parë në Mitrovicë, duke avancuar gjuhën, kodimin dhe shkrim-leximin.",
-      "education": "Doktoratë në Gjuhën dhe Letërsinë Angleze, Universiteti i Prishtines",
+      "educationLabel": "Edukimi",
+      "education": "Doktoratë në Gjuhën dhe Letërsinë Angleze, Universiteti i Prishtinës",
+      "achievementsLabel": "Arritjet Kryesore",
       "achievements": "Krijoi partneritete me Logiscool • Trajnoi 500+ studentë • Instruktore eksperte TOEFL"
     },
     "members": {
       "adea": {
         "name": "Adea Baliu",
-        "role": "Mësimdhënëse e Anglishtes"
+        "role": "Mësimdhënëse e Anglishtes",
+        "fact": "E do ta kthejë gramatikën në lojë."
       },
       "aida": {
         "name": "Aida Topallaj",
-        "role": "Mësimdhënëse e Anglishtes"
+        "role": "Mësimdhënëse e Anglishtes",
+        "fact": "Beson se çdo nxënës ka një histori që ia vlen të tregohet."
       },
       "arbnora": {
         "name": "Arbnora Qorraj",
-        "role": "CEO & Themeluese"
+        "role": "CEO & Themeluese",
+        "fact": "I kthen idetë e mëdha në tradita shkollore."
       },
       "ardita-ib": {
         "name": "Ardita Ibraimi",
-        "role": "Mësimdhënëse e Anglishtes"
+        "role": "Mësimdhënëse e Anglishtes",
+        "fact": "E nis çdo orë mësimi me buzëqeshje."
       },
       "ardita-jel": {
         "name": "Ardita Jeliqi",
-        "role": "Mësimdhënëse e Gjermanishtes"
+        "role": "Mësimdhënëse e Gjermanishtes",
+        "fact": "E bën gramatikën gjermane të duket e thjeshtë."
       },
       "arijana": {
         "name": "Arijana Uka",
-        "role": "Zyrtare Financiare"
+        "role": "Zyrtare Financiare",
+        "fact": "I mban numrat po aq të rregullt sa klasat."
       },
       "arta": {
         "name": "Arta Krasniqi",
-        "role": "Mësimdhënëse e Anglishtes"
+        "role": "Mësimdhënëse e Anglishtes",
+        "fact": "Kampione e debateve në Speaking Club."
       },
       "ela": {
         "name": "Ela Hoti",
-        "role": "Menaxhere & Mësimdhënëse e Gjermanishtes"
+        "role": "Menaxhere & Mësimdhënëse e Gjermanishtes",
+        "fact": "E drejton ditën e shkollës si orë zvicerane."
       },
       "ervin": {
         "name": "Ervin Behxheti",
-        "role": "Trajner i Kodimit"
+        "role": "Trajner i Kodimit",
+        "fact": "Ndërtoi faqen e tij të parë si adoleshent."
       },
       "fjolla": {
         "name": "Fjolla Canolli",
-        "role": "Dizajnere Grafike"
+        "role": "Dizajnere Grafike",
+        "fact": "Dizajnon gjithçka që shihni në muret tona."
       },
       "granit": {
         "name": "Granit Durmishaj",
-        "role": "Mësimdhënës i Anglishtes"
+        "role": "Mësimdhënës i Anglishtes",
+        "fact": "E sjell muzikën në klasë."
       },
       "jona": {
         "name": "Jona Loxha",
-        "role": "Trajnere e Kodimit"
+        "role": "Trajnere e Kodimit",
+        "fact": "Mund t'i shpjegojë ciklet me copa pice."
       },
       "nora": {
         "name": "Nora Fazliu",
-        "role": "Mësimdhënëse e Anglishtes"
+        "role": "Mësimdhënëse e Anglishtes",
+        "fact": "Lexon një libër të ri çdo javë."
       },
       "rona": {
         "name": "Rona Peci",
-        "role": "Zyrtare Financiare"
+        "role": "Zyrtare Financiare",
+        "fact": "Fytyra miqësore pas çdo fature."
       },
       "valeriana": {
         "name": "Valeriana Fejzullahu",
-        "role": "Mësimdhënëse e Gjermanishtes"
+        "role": "Mësimdhënëse e Gjermanishtes",
+        "fact": "E bën përgatitjen për provimet Goethe të lehtë."
       },
       "valon": {
         "name": "Valon Sejdiu",
-        "role": "Mësimdhënës i Anglishtes"
+        "role": "Mësimdhënës i Anglishtes",
+        "fact": "E kthen përgatitjen për provime në sport ekipor."
       }
     }
   },
-  "contact": {
-    "badge": "Kontaktoni",
-    "title": "Filloni Udhëtimin Tuaj të",
-    "titleHighlight": "Mësimit Sot",
-    "description": "Gati të shfrytëzoni potencialin tuaj? Kontaktoni me ne për të mësuar më shumë rreth programeve tona dhe për të gjetur kursin e përsosur për qëllimet tuaja.",
-    "form": {
-      "title": "Dërgoni një Mesazh",
-      "description": "Plotësoni formularin më poshtë dhe ne do t'ju kontaktojmë sa më shpejt të jetë e mundur.",
-      "name": "Emri i Plotë",
-      "email": "Adresa e Email-it",
-      "phone": "Numri i Telefonit",
-      "program": "Programi i Interesit",
-      "message": "Mesazhi",
-      "selectProgram": "Zgjidhni një program",
-      "englishOption": "Gjuha Angleze",
-      "germanOption": "Gjuha Gjermane",
-      "programmingOption": "Programim & Teknologji",
-      "logiscoolOption": "Logiscool Kodim për Fëmijë",
-      "messagePlaceholder": "Na tregoni rreth qëllimeve tuaja të mësimit dhe çdo pyetje që mund të keni...",
-      "sendMessage": "Dërgo Mesazhin",
-      "sending": "Duke dërguar...",
-      "required": "*"
-    },
-    "info": {
-      "visit": {
-        "title": "Vizitoni Kampusin Tonë",
-        "info": "Mitrovicë, Kosovë",
-        "description": "Ejani të shikoni objektet tona moderne"
+  "testimonials": {
+    "badge": "Përshtypjet",
+    "title": "Çfarë Thonë Studentët",
+    "titleHighlight": "dhe Prindërit",
+    "description": "Dëgjoni përvojat e familjeve tona të London School.",
+    "items": {
+      "agron": {
+        "name": "Agron K.",
+        "role": "Prind",
+        "quote": "Fëmija im ka përparuar jashtëzakonisht në anglisht falë London School. Mësuesit janë shumë profesionistë dhe të përkushtuar."
       },
-      "call": {
-        "title": "Na Telefononi",
-        "info": "+383 49 236 888",
-        "description": "Hën-Pre, 9:00 - 20:30"
+      "valdete": {
+        "name": "Valdete M.",
+        "role": "Studente Gjermanisht",
+        "quote": "Kalova provimin Goethe B2 në përpjekjen e parë! Metoda e mësimdhënies është shumë efektive dhe interaktive."
       },
-      "email": {
-        "title": "Na Shkruani Email",
-        "info": "londonschooloffice@gmail.com",
-        "description": "Ne përgjigjemi brenda 24 orëve"
+      "luan": {
+        "name": "Luan B.",
+        "role": "Prind",
+        "quote": "Djali im ndoqi kursin e programimit dhe tani krijon lojëra të veta. Partneriteti me Logiscool është fantastik!"
       },
-      "hours": {
-        "title": "Orët e Zyrave",
-        "info": "Hën-Pre: 9:00-20:30",
-        "description": "Shtunë: 10:00-14:00"
+      "besarta": {
+        "name": "Besarta S.",
+        "role": "Studente Anglisht",
+        "quote": "Fitova TOEFL 105 pikë dhe u pranova në universitetin e ëndrrave të mia. Faleminderit London School!"
+      },
+      "arben": {
+        "name": "Arben D.",
+        "role": "Prind",
+        "quote": "Vajza ime mori bursë studimi falë suksesit në konkurs. Jam shumë krenar për mbështetjen e London School."
+      },
+      "mirela": {
+        "name": "Mirela H.",
+        "role": "Studente Programim",
+        "quote": "U punësova si developer pas kursit të programimit. Trajnimi ishte shumë praktik dhe i fokusuar në industri."
       }
     },
-    "cta": {
-      "title": "Gati të Filloni Udhëtimin Tuaj?",
-      "description": "Bashkohuni me qindra studentë të suksesshëm që kanë arritur qëllimet e tyre me London School. E ardhmja juaj fillon me një hap të vetëm."
-    },
-    "toast": {
-      "success": "Mesazhi u Dërgua!",
-      "successDesc": "Faleminderit për interesimin tuaj. Do t'ju kontaktojmë brenda 24 orëve."
+    "success": {
+      "badge": "Historitë e Suksesit",
+      "title": "Çfarë Thonë Studentët Tanë",
+      "description": "Arritje reale nga studentë realë që transformuan të ardhmen e tyre me London School.",
+      "ana": {
+        "name": "Ana Berisha",
+        "program": "Anglisht TOEFL",
+        "achievement": "105/120",
+        "quote": "Përgatitja TOEFL e London School më ndihmoi të arrij rezultatin e ëndrrave dhe të pranohem në universitet jashtë vendit!"
+      },
+      "arsim": {
+        "name": "Arsim Kabashi",
+        "program": "Programim",
+        "achievement": "React Developer",
+        "quote": "Kursi i programimit më dha aftësi praktike. Tani punoj si frontend developer!"
+      },
+      "petrit": {
+        "name": "Petrit Kutllovci",
+        "program": "Gjuha Gjermane",
+        "achievement": "I certifikuar B2",
+        "quote": "Mësues dhe metodë e shkëlqyer. Tani mund të komunikoj me besim në gjermanisht për biznes."
+      }
     }
   },
-  "registration": {
-    "title": "Regjistrim me Ofertë Speciale",
-    "description": "Regjistrohuni tani dhe merrni përfitime speciale! Plotësoni formularin më poshtë dhe ne do t'ju kontaktojmë me detaje rreth programeve tona.",
-    "ageGroup": "Grupi i Moshës",
-    "selectAge": "Zgjidhni grupin e moshës",
-    "earlyBird": "🎉 Ofertë e Hershme!",
-    "earlyBirdDesc": "Regjistrohuni këtë muaj dhe merrni 10% zbritje në regjistrimin e kursit tuaj të parë.",
-    "submit": "Përfundo Regjistrimin",
-    "success": "Regjistrimi u Pranua!",
-    "successDesc": "Faleminderit për regjistrimin! Do t'ju kontaktojmë brenda 24 orëve me më shumë informacion rreth programit tuaj të zgjedhur.",
-    "age": {
-      "kids": "Fëmijë (5–7)",
-      "juniors": "Juniorë (8–12)",
-      "teens": "Të rinj (13–17)",
-      "adults": "Të rritur (18+)"
-    }
+  "gallery": {
+    "badge": "Galeria",
+    "previewTitle": "Momente Që Vlejnë",
+    "viewFull": "Shiko Galerinë e Plotë",
+    "comingSoon": "Fotot vijnë së shpejti",
+    "pageTitle": "Galeria",
+    "pageDescription": "Kampe, festivale, udhëtime dhe jeta e përditshme në klasë — shfletoni momentet që e bëjnë London School.",
+    "filters": {
+      "all": "Të Gjitha",
+      "summerCamp": "Kampi Veror",
+      "techFest": "Tech Fest",
+      "trips": "Udhëtime",
+      "activities": "Aktivitete",
+      "training": "Trajnime"
+    },
+    "emptyTitle": "Fotot vijnë së shpejti",
+    "emptyDescription": "Po mbledhim momentet më të mira nga kjo kategori. Kthehuni së shpejti!"
   },
   "partners": {
     "badge": "Partnerët Tanë",
     "title": "Organizatat me të Cilat",
     "titleHighlight": "Bashkëpunojmë",
-    "description": "Partneritete që krijojnë mundësi për studentët tanë"
+    "description": "Partneritete që krijojnë mundësi për studentët tanë."
   },
   "benefits": {
     "badge": "Benefite Shtesë",
     "title": "Më Shumë se Vetëm",
     "titleHighlight": "Arsimim",
-    "description": "Përfitime ekskluzive për studentët dhe stafin e London School",
+    "description": "Përfitime ekskluzive për studentët dhe stafin e London School.",
     "scholarship": {
       "title": "Bursa Studimi",
       "description": "Mbështetje financiare për studentët e shkëlqyer"
@@ -338,50 +509,129 @@
       "description": "Festivali vjetor i teknologjisë"
     }
   },
-  "testimonials": {
-    "badge": "Përshtypjet",
-    "title": "Çfarë Thonë Studentët",
-    "titleHighlight": "dhe Prindërit",
-    "description": "Dëgjoni përvojat e familjeve tona të London School"
+  "contact": {
+    "badge": "Kontaktoni",
+    "title": "Filloni Udhëtimin Tuaj të",
+    "titleHighlight": "Mësimit Sot",
+    "description": "Gati të shfrytëzoni potencialin tuaj? Kontaktoni me ne për të mësuar më shumë rreth programeve tona dhe për të gjetur kursin e përsosur për qëllimet tuaja.",
+    "form": {
+      "name": "Emri i Plotë",
+      "email": "Adresa e Email-it",
+      "phone": "Numri i Telefonit",
+      "program": "Programi i Interesit",
+      "selectProgram": "Zgjidhni një program",
+      "englishOption": "Gjuha Angleze",
+      "germanOption": "Gjuha Gjermane",
+      "programmingOption": "Programim & Teknologji",
+      "logiscoolOption": "Logiscool Kodim për Fëmijë",
+      "sending": "Duke dërguar..."
+    },
+    "info": {
+      "visit": {
+        "title": "Vizitoni Kampusin Tonë",
+        "info": "Mitrovicë, Kosovë",
+        "description": "Ejani të shikoni objektet tona moderne."
+      },
+      "call": {
+        "title": "Na Telefononi",
+        "info": "+383 49 236 888",
+        "description": "Hën–Pre, 9:00 – 20:30"
+      },
+      "email": {
+        "title": "Na Shkruani Email",
+        "info": "londonschooloffice@gmail.com",
+        "description": "Ne përgjigjemi brenda 24 orëve."
+      },
+      "hours": {
+        "title": "Orët e Zyrave",
+        "info": "Hën–Pre: 9:00–20:30",
+        "description": "Shtunë: 10:00–14:00"
+      }
+    },
+    "cta": {
+      "title": "Gati të Filloni Udhëtimin Tuaj?",
+      "description": "Bashkohuni me qindra studentë të suksesshëm që kanë arritur qëllimet e tyre me London School. E ardhmja juaj fillon me një hap të vetëm."
+    }
   },
-  "gallery": {
-    "badge": "Galeria",
-    "title": "Jeta në",
-    "titleHighlight": "London School",
-    "description": "Eksploroni klasat, aktivitetet dhe ambientet tona moderne",
-    "classrooms": "Klasat",
-    "activities": "Aktivitetet",
-    "events": "Ngjarjet"
+  "contactCta": {
+    "title": "Gati të filloni udhëtimin tuaj?",
+    "description": "Bashkohuni me qindra studentë që mësojnë gjuhë dhe teknologji në London School.",
+    "apply": "Apliko për një Program",
+    "visit": "Na Vizitoni"
+  },
+  "registration": {
+    "title": "Regjistrim me Ofertë Speciale",
+    "description": "Regjistrohuni tani dhe merrni përfitime speciale! Plotësoni formularin më poshtë dhe ne do t'ju kontaktojmë me detaje rreth programeve tona.",
+    "ageGroup": "Grupi i Moshës",
+    "selectAge": "Zgjidhni grupin e moshës",
+    "earlyBird": "🎉 Ofertë e Hershme!",
+    "earlyBirdDesc": "Regjistrohuni këtë muaj dhe merrni 10% zbritje në regjistrimin e kursit tuaj të parë.",
+    "submit": "Përfundo Regjistrimin",
+    "success": "Regjistrimi u Pranua!",
+    "successDesc": "Faleminderit për regjistrimin! Do t'ju kontaktojmë brenda 24 orëve me më shumë informacion rreth programit tuaj të zgjedhur.",
+    "age": {
+      "kids": "Fëmijë (5–7)",
+      "juniors": "Juniorë (8–12)",
+      "teens": "Të rinj (13–17)",
+      "adults": "Të rritur (18+)"
+    }
   },
   "jobs": {
     "badge": "Karriera",
     "title": "Bashkohu me",
     "titleHighlight": "Ekipin Tonë",
-    "description": "Jemi gjithmonë në kërkim të talenteve të reja për të bashkuar ekipin tonë",
+    "description": "Jemi gjithmonë në kërkim të talenteve të reja për të bashkuar ekipin tonë.",
     "applyEmail": "Apliko duke dërguar CV në:",
     "positions": {
       "englishTeacher": {
         "title": "Mësimdhënës i Gjuhës Angleze",
-        "requirements": "Certifikim TEFL/CELTA, përvojë mësimdhënieje"
+        "requirements": "Certifikim TEFL/CELTA, përvojë mësimdhënieje."
       },
       "germanTeacher": {
         "title": "Mësimdhënës i Gjuhës Gjermane",
-        "requirements": "Folës amtar ose certifikim C2, përvojë mësimdhënieje"
+        "requirements": "Folës amtar ose certifikim C2, përvojë mësimdhënieje."
       },
       "programmingTeacher": {
         "title": "Mësimdhënës i Programimit",
-        "requirements": "Përvojë në programim, preferueshëm me përvojë mësimore"
+        "requirements": "Përvojë në programim, preferueshëm me përvojë mësimore."
       },
       "admin": {
         "title": "Asistente Administrative",
-        "requirements": "Aftësi organizative, njohuri të anglishtes"
+        "requirements": "Aftësi organizative, njohuri të anglishtes."
       },
       "maintenance": {
         "title": "Mirëmbajtëse",
-        "requirements": "Përvojë në mirëmbajtje objektesh"
+        "requirements": "Përvojë në mirëmbajtje objektesh."
       }
     },
     "applyNow": "Apliko Tani"
+  },
+  "pages": {
+    "about": {
+      "title": "Rreth London School",
+      "description": "Zbuloni historinë, vlerat dhe përkushtimin tonë ndaj përsosmërisë arsimore në Mitrovicë që nga viti 2019.",
+      "ctaTitle": "Gati të Bashkoheni me Komunitetin Tonë?",
+      "ctaDescription": "Përjetoni ndryshimin e London School dhe bëhuni pjesë e historisë sonë të suksesit.",
+      "ctaPrograms": "Eksploro Programet",
+      "ctaContact": "Na Kontaktoni"
+    },
+    "programs": {
+      "title": "Programet Tona",
+      "description": "Kurse gjithëpërfshirëse të dizajnuara për të zhbllokuar potencialin tuaj në gjuhë dhe teknologji."
+    },
+    "contact": {
+      "title": "Na Kontaktoni",
+      "description": "Gati të filloni udhëtimin tuaj të mësimit? Kontaktoni ekipin tonë dhe zbuloni si mund t'ju ndihmojmë të arrini qëllimet tuaja."
+    },
+    "jobs": {
+      "title": "Karriera",
+      "description": "Jemi gjithmonë në kërkim të edukatorëve dhe stafit të pasionuar për t'u bashkuar me familjen e London School."
+    }
+  },
+  "notFound": {
+    "title": "Ups! Faqja nuk u gjet",
+    "description": "Faqja që po kërkoni nuk ekziston ose është zhvendosur.",
+    "backHome": "Kthehu te Fillimi"
   },
   "brand": {
     "initials": "LS",
@@ -390,26 +640,10 @@
   },
   "aria": {
     "openMenu": "Hap menynë",
-    "closeMenu": "Mbyll menynë"
-  },
-  "index": {
-    "earlyBird": {
-      "title": "Regjistrohu Tani!",
-      "description": "Merr 10% zbritje në regjistrimin e kursit tënd të parë këtë muaj!",
-      "applyCta": "Apliko për Ofertë Speciale"
-    },
-    "redirect": {
-  "team": {
-    "meet": "Njihu me Ekipin Tonë",
-    "discover": "Mëso rreth profesionistëve që ndihmojnë në suksesin tënd",
-    "view": "Shiko Ekipin"
-  },
-  "programs": {
-    "explore": "Shiko të Gjitha Programet",
-    "discover": "Mëso për kurset tona të gjuhëve dhe programimit",
-    "view": "Shiko Programet"
-  }
-}
-
+    "closeMenu": "Mbyll menynë",
+    "closeLightbox": "Mbyll shikuesin e fotove",
+    "prevPhoto": "Fotoja e mëparshme",
+    "nextPhoto": "Fotoja tjetër",
+    "showSlide": "Shfaq slajdin {{number}}"
   }
 }

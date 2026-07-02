@@ -1,118 +1,90 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { useCallback, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import SplitTextHeading from "@/components/shared/SplitTextHeading";
+import { TESTIMONIALS } from "@/data/testimonials";
+import { fadeUp } from "@/lib/animations";
+
+const AUTO_ADVANCE_MS = 5000;
 
 const Testimonials = () => {
   const { t } = useTranslation();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
-  const testimonials = [
-    {
-      name: "Agron K.",
-      role: "Prind",
-      content: "Fëmija im ka përparuar jashtëzakonisht në anglisht falë London School. Mësuesit janë shumë profesionistë dhe të përkushtuar.",
-      avatar: "AK",
-      color: "bg-blue-500"
-    },
-    {
-      name: "Valdete M.",
-      role: "Studente Gjermanisht",
-      content: "Kalova provimin Goethe B2 në përpjekjen e parë! Metoda e mësimdhënies është shumë efektive dhe interaktive.",
-      avatar: "VM",
-      color: "bg-purple-500"
-    },
-    {
-      name: "Luan B.",
-      role: "Prind",
-      content: "Djali im ndoqi kursin e programimit dhe tani krijon lojëra të veta. Logiscool partnering është fantastik!",
-      avatar: "LB",
-      color: "bg-green-500"
-    },
-    {
-      name: "Besarta S.",
-      role: "Studente Anglisht",
-      content: "Fitova TOEFL 105 pikë dhe u pranova në universitetin e ëndrrave të mia. Faleminderit London School!",
-      avatar: "BS",
-      color: "bg-yellow-500"
-    },
-    {
-      name: "Arben D.",
-      role: "Prind",
-      content: "Vajza ime mori bursë studimi falë suksesit në konkurs. Jam shumë krenar për mbështetjen e London School.",
-      avatar: "AD",
-      color: "bg-red-500"
-    },
-    {
-      name: "Mirela H.",
-      role: "Studente Programim",
-      content: "U punësova si developer pas kursit të programimit. Trajnimi ishte shumë praktik dhe i fokusuar në industri.",
-      avatar: "MH",
-      color: "bg-indigo-500"
-    }
-  ];
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const timer = setInterval(scrollNext, AUTO_ADVANCE_MS);
+    return () => clearInterval(timer);
+  }, [emblaApi, scrollNext]);
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-up">
-          <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-            {t('testimonials.badge')}
-          </Badge>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6">
-            {t('testimonials.title')}
-            <span className="block text-primary">{t('testimonials.titleHighlight')}</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('testimonials.description')}
+    <section
+      className="relative overflow-hidden bg-ink py-24 md:py-32"
+      data-section-label={t("testimonials.badge")}
+    >
+      {/* Decorative quote mark */}
+      <Quote
+        className="pointer-events-none absolute -top-8 left-8 h-64 w-64 text-ink-foreground/5"
+        aria-hidden
+      />
+
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="mb-14 max-w-3xl">
+          <p className="eyebrow mb-4 text-secondary">
+            {t("testimonials.badge")}
           </p>
+          <SplitTextHeading
+            text={`${t("testimonials.title")} ${t("testimonials.titleHighlight")}`}
+            className="display-sub font-heading font-extrabold text-ink-foreground"
+          />
+          <motion.p
+            className="mt-4 text-lg text-ink-foreground/70"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {t("testimonials.description")}
+          </motion.p>
         </div>
 
-        {/* Testimonials Carousel */}
-        <div className="max-w-6xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="premium-card h-full">
-                    <CardContent className="p-8">
-                      <Quote className="w-10 h-10 text-primary/20 mb-4" />
-                      <p className="text-muted-foreground mb-6 italic leading-relaxed">
-                        "{testimonial.content}"
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {TESTIMONIALS.map((item) => (
+              <div
+                key={item.key}
+                className="min-w-0 shrink-0 grow-0 basis-full pr-8 md:basis-1/2"
+              >
+                <blockquote className="flex h-full flex-col justify-between">
+                  <p className="text-xl italic leading-relaxed text-ink-foreground/90 md:text-[28px] md:leading-snug">
+                    “{t(`testimonials.items.${item.key}.quote`)}”
+                  </p>
+                  <footer className="mt-8 flex items-center gap-4">
+                    <Avatar className={`h-12 w-12 ${item.color}`}>
+                      <AvatarFallback className="bg-transparent font-bold text-white">
+                        {item.initials}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-heading font-bold text-ink-foreground">
+                        {t(`testimonials.items.${item.key}.name`)}
                       </p>
-                      <div className="flex items-center space-x-4">
-                        <Avatar className={`${testimonial.color} w-12 h-12`}>
-                          <AvatarFallback className="text-white font-bold">
-                            {testimonial.avatar}
-                          </AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <p className="font-semibold">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+                      <p className="text-sm text-secondary">
+                        {t(`testimonials.items.${item.key}.role`)}
+                      </p>
+                    </div>
+                  </footer>
+                </blockquote>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

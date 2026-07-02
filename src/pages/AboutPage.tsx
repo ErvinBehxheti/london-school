@@ -1,64 +1,49 @@
-import Header from "@/components/Header";
-import About from "@/components/About";
-import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
-import JobOpenings from "@/components/JobOpenings";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import Header from "@/components/Header";
+import PageHero from "@/components/shared/PageHero";
+import About from "@/components/About";
+import Benefits from "@/components/Benefits";
+import TeamSpotlight from "@/components/TeamSpotlight";
+import Testimonials from "@/components/Testimonials";
+import MagneticButton from "@/components/shared/MagneticButton";
+import { Button } from "@/components/ui/button";
 
 const AboutPage = () => {
-
-    useEffect(() => {
-      window.scrollTo({top: 0, behavior: "smooth"})
-    }, [])
+  const { t } = useTranslation();
 
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Header />
-      
-      {/* Page Header */}
-      <section className="pt-32 pb-16 bg-gradient-primary">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
-              <ArrowLeft className="mr-2 w-4 h-4" />
-              Back to Home
-            </Link>
-            <h1 className="font-heading font-bold text-4xl md:text-6xl mb-6">
-              About London School
-            </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Discover our story, values, and commitment to educational excellence in Mitrovica since 2019.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("about.badge")}
+        title={t("pages.about.title")}
+        description={t("pages.about.description")}
+      />
 
       <About />
-      <Team />
+      <Benefits />
+      <TeamSpotlight />
       <Testimonials />
-      <JobOpenings />
-      
-      {/* CTA Section */}
-      <section className="py-16 bg-muted/50">
+
+      {/* CTA */}
+      <section className="bg-gradient-subtle py-20">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="font-heading font-bold text-3xl mb-4">Ready to Join Our Community?</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Experience the London School difference and become part of our success story.
+          <h2 className="font-heading text-3xl font-extrabold text-foreground md:text-4xl">
+            {t("pages.about.ctaTitle")}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            {t("pages.about.ctaDescription")}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/programs">
-              <Button size="lg" className="premium-button text-white font-semibold">
-                Explore Programs
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <MagneticButton>
+              <Button asChild size="lg" className="premium-button font-semibold text-white">
+                <Link to="/programs">{t("pages.about.ctaPrograms")}</Link>
               </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg">
-                Contact Us
-              </Button>
-            </Link>
+            </MagneticButton>
+            <Button asChild size="lg" variant="ghost" className="border border-border">
+              <Link to="/contact">{t("pages.about.ctaContact")}</Link>
+            </Button>
           </div>
         </div>
       </section>
