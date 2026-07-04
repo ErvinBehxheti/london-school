@@ -1,0 +1,29 @@
+{
+  "name": "London School Mitrovica",
+  "short_name": "London School",
+  "description": "Kurse profesionale anglisht, gjermanisht dhe teknologji (programim) për fëmijë, të rinj dhe të rritur në Mitrovicë, Kosovë.",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "sq",
+  "dir": "ltr",
+  "theme_color": "#0B1E3D",
+  "background_color": "#F7F5F0",
+  "categories": ["education", "business"],
+  "icons": [
+    {
+      "src": "/photos/logos/londonschool.png",
+      "sizes": "220x229",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/photos/logos/londonschool.png",
+      "sizes": "220x229",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

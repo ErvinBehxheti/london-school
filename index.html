@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
   <head>
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
 
     <title>London School Mitrovica – Kurse Anglisht, Gjermanisht & Teknologji</title>
@@ -15,33 +15,86 @@
       content="London School në Mitrovicë ofron kurse profesionale të gjuhës angleze, gjermanishtes dhe teknologjisë (programim për fëmijë dhe të rinj) në një ambient modern e motivues."
     />
 
-    <!-- (Optional / low impact) -->
+    <!-- (Optional / low impact, kept for completeness) -->
     <meta
       name="keywords"
-      content="London School Mitrovica, kurse anglisht, kurse gjermanisht, kurse programimi për fëmijë"
+      content="London School Mitrovica, kurse anglisht, kurse gjermanisht, kurse programimi për fëmijë, shkolle gjuhesh Mitrovice, Logiscool Kosove"
     />
 
     <meta name="author" content="London School" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="publisher" content="London School" />
+    <meta name="copyright" content="London School" />
+    <meta name="application-name" content="London School" />
+
+    <!-- Crawling / indexing directives -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="format-detection" content="telephone=yes, address=yes, email=yes" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="rating" content="general" />
+
+    <!-- Language / region -->
+    <meta http-equiv="content-language" content="sq" />
+    <meta name="geo.region" content="XK" />
+    <meta name="geo.placename" content="Mitrovica, Kosovo" />
+    <meta name="geo.position" content="42.8883059;20.867624" />
+    <meta name="ICBM" content="42.8883059, 20.867624" />
+
+    <!-- Theme / display -->
+    <meta name="theme-color" content="#0B1E3D" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light" />
+    <meta name="msapplication-TileColor" content="#0B1E3D" />
+    <meta name="msapplication-TileImage" content="/photos/logos/londonschool.png" />
+    <meta name="msapplication-config" content="none" />
+
+    <!-- iOS / Android home-screen app behavior -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="London School" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.londonschool-ks.com" />
+    <link rel="canonical" href="https://www.londonschool-ks.com/" />
 
-    <!-- Favicon / Icons -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="/photos/logos/londonschool.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/photos/logos/londonschool.png"
-    />
+    <!-- This is one SPA serving en/de/sq from the same URL (client-side language
+         switch, not separate localized paths), so all hreflang variants —
+         including x-default — self-reference the same canonical URL. That's the
+         correct pattern per Google's international-SEO guidelines for sites
+         without per-language URLs. -->
+    <link rel="alternate" hreflang="sq" href="https://www.londonschool-ks.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.londonschool-ks.com/" />
+    <link rel="alternate" hreflang="de" href="https://www.londonschool-ks.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.londonschool-ks.com/" />
 
-    <!-- Open Graph (Facebook, etc.) -->
+    <!-- Sitemap discovery (also declared in /robots.txt) -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Web app manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon / Icons (single source asset — see note in PR/summary about
+         generating a dedicated multi-size icon set) -->
+    <link rel="icon" type="image/png" sizes="any" href="/photos/logos/londonschool.png" />
+    <link rel="shortcut icon" type="image/png" href="/photos/logos/londonschool.png" />
+    <link rel="apple-touch-icon" href="/photos/logos/londonschool.png" />
+
+    <!-- Connection warm-up: self-hosted fonts used above the fold, and the
+         Google Maps embed on /contact -->
+    <link rel="preload" as="font" type="font/woff" href="/fonts/Inter-Regular.woff" crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/ttf" href="/fonts/Poppins-ExtraBold.ttf" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="preconnect" href="https://maps.google.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="London School" />
-    <meta property="og:url" content="https://www.londonschool-ks.com" />
+    <meta property="og:url" content="https://www.londonschool-ks.com/" />
+    <meta property="og:locale" content="sq_AL" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
     <meta
       property="og:title"
       content="London School Mitrovica – Kurse Gjuhësh & Teknologjie për Fëmijë"
@@ -50,49 +103,104 @@
       property="og:description"
       content="London School në Mitrovicë ofron kurse anglisht, gjermanisht dhe teknologji për fëmijë dhe të rinj, me metodologji moderne dhe bashkëpunime ndërkombëtare."
     />
-    <meta
-      property="og:image"
-      content="https://www.londonschool-ks.com/photos/logos/londonschool.png"
-    />
+    <meta property="og:image" content="https://www.londonschool-ks.com/photos/hero/main-1.jpg" />
+    <meta property="og:image:secure_url" content="https://www.londonschool-ks.com/photos/hero/main-1.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1067" />
+    <meta property="og:image:alt" content="Studentët e London School gjatë ceremonisë së diplomimit" />
 
-    <!-- Twitter Card (nice to have) -->
+    <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="London School Mitrovica – Kurse Gjuhësh & Teknologjie" />
     <meta
       name="twitter:description"
       content="Kurse profesionale anglisht, gjermanisht dhe teknologji për fëmijë dhe të rinj në Mitrovicë."
     />
-    <meta
-      name="twitter:image"
-      content="https://www.londonschool-ks.com/photos/logos/londonschool.png"
-    />
+    <meta name="twitter:image" content="https://www.londonschool-ks.com/photos/hero/main-1.jpg" />
+    <meta name="twitter:image:alt" content="Studentët e London School gjatë ceremonisë së diplomimit" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": ["EducationalOrganization", "School"],
-        "name": "London School",
-        "url": "https://www.londonschool-ks.com",
-        "logo": "https://www.londonschool-ks.com/photos/logos/londonschool.png",
-        "contactPoint": [
+        "@graph": [
           {
-            "@type": "ContactPoint",
+            "@type": ["EducationalOrganization", "School"],
+            "@id": "https://www.londonschool-ks.com/#organization",
+            "name": "London School",
+            "alternateName": "London School Mitrovica",
+            "url": "https://www.londonschool-ks.com/",
+            "description": "London School në Mitrovicë ofron kurse profesionale të gjuhës angleze, gjermanishtes dhe teknologjisë për fëmijë, të rinj dhe të rritur.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.londonschool-ks.com/photos/logos/londonschool.png",
+              "width": 220,
+              "height": 229
+            },
+            "image": "https://www.londonschool-ks.com/photos/hero/main-1.jpg",
+            "email": "londonschooloffice@gmail.com",
             "telephone": "+383 49 236 888",
-            "contactType": "customer service",
-            "areaServed": "XK"
+            "foundingDate": "2019",
+            "founder": {
+              "@type": "Person",
+              "name": "Albina Hoti",
+              "jobTitle": "Founder & Director"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rr. Afrim Zhitia",
+              "addressLocality": "Mitrovica",
+              "postalCode": "40000",
+              "addressCountry": "XK"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 42.8883059,
+              "longitude": 20.867624
+            },
+            "hasMap": "https://www.google.com/maps?q=42.8883059,20.867624",
+            "areaServed": {
+              "@type": "City",
+              "name": "Mitrovica"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "20:30"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "10:00",
+                "closes": "14:00"
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/londonschoolks",
+              "https://www.instagram.com/london__school"
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+383 49 236 888",
+                "email": "londonschooloffice@gmail.com",
+                "contactType": "customer service",
+                "areaServed": "XK",
+                "availableLanguage": ["Albanian", "English", "German"]
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.londonschool-ks.com/#website",
+            "url": "https://www.londonschool-ks.com/",
+            "name": "London School",
+            "inLanguage": ["sq", "en", "de"],
+            "publisher": { "@id": "https://www.londonschool-ks.com/#organization" }
           }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rr. Afrim Zhitia 40000",
-          "addressLocality": "Mitrovica",
-          "postalCode": "40000",
-          "addressCountry": "XK"
-        },
-        "sameAs": [
-          "https://www.facebook.com/londonschoolks",
-          "https://www.instagram.com/london__school"
         ]
       }
     </script>
