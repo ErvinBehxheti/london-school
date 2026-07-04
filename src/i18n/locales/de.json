@@ -1,7 +1,8 @@
 {
   "common": {
     "backHome": "Zurück zur Startseite",
-    "loading": "Wird geladen…"
+    "loading": "Wird geladen…",
+    "optional": "optional"
   },
   "navigation": {
     "home": "Startseite",
@@ -524,6 +525,12 @@
       "germanOption": "Deutsche Sprache",
       "programmingOption": "Programmierung & Technologie",
       "logiscoolOption": "Logiscool Coding für Kinder",
+      "message": "Nachricht",
+      "messagePlaceholder": "Teile uns mit, was du wissen möchtest …",
+      "send": "Nachricht Senden",
+      "emailSubject": "Anfrage über die Website — {{name}}",
+      "successTitle": "Deine E-Mail-App wird geöffnet …",
+      "successDesc": "Wir haben deine Nachricht eingetragen – klicke einfach auf Senden. Lieber direkt schreiben? Erreiche uns unter {{email}}.",
       "sending": "Wird gesendet..."
     },
     "info": {
@@ -567,8 +574,9 @@
     "earlyBird": "🎉 Frühbucher-Angebot!",
     "earlyBirdDesc": "Melde dich diesen Monat an und erhalte 10% Rabatt auf deinen ersten Kurs.",
     "submit": "Anmeldung Abschließen",
-    "success": "Anmeldung Erhalten!",
-    "successDesc": "Danke für deine Anmeldung! Wir kontaktieren dich innerhalb von 24 Stunden mit weiteren Informationen zu deinem gewählten Programm.",
+    "emailSubject": "Neue Anmeldung — {{name}}",
+    "success": "Fast geschafft!",
+    "successDesc": "Wir haben deine E-Mail-App mit deinen Angaben geöffnet – klicke einfach auf Senden, um deine Anmeldung abzuschließen.",
     "age": {
       "kids": "Kinder (5–7)",
       "juniors": "Juniors (8–12)",
@@ -582,6 +590,9 @@
     "titleHighlight": "unseres Teams",
     "description": "Wir sind immer auf der Suche nach neuen Talenten für unser Team.",
     "applyEmail": "Bewirb dich per CV an:",
+    "emailSubject": "Bewerbung — {{title}}",
+    "applyToastTitle": "Deine E-Mail-App wird geöffnet …",
+    "applyToastDesc": "Wir haben außerdem {{email}} in deine Zwischenablage kopiert, nur für den Fall.",
     "positions": {
       "englishTeacher": {
         "title": "Englischlehrer/in",

@@ -1,91 +1,138 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Mail, Briefcase } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  ClipboardList,
+  Code2,
+  Copy,
+  Languages,
+  Mail,
+  Wrench,
+  type LucideIcon,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
+import SplitTextHeading from "@/components/shared/SplitTextHeading";
+import MagneticButton from "@/components/shared/MagneticButton";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
+import { buildMailto, CONTACT_EMAIL } from "@/lib/mailto";
+import { cardVariant, fadeUp, stagger } from "@/lib/animations";
+
+interface Position {
+  titleKey: string;
+  requirementsKey: string;
+  icon: LucideIcon;
+}
+
+const POSITIONS: Position[] = [
+  { titleKey: "jobs.positions.englishTeacher.title", requirementsKey: "jobs.positions.englishTeacher.requirements", icon: Languages },
+  { titleKey: "jobs.positions.germanTeacher.title", requirementsKey: "jobs.positions.germanTeacher.requirements", icon: Languages },
+  { titleKey: "jobs.positions.programmingTeacher.title", requirementsKey: "jobs.positions.programmingTeacher.requirements", icon: Code2 },
+  { titleKey: "jobs.positions.admin.title", requirementsKey: "jobs.positions.admin.requirements", icon: ClipboardList },
+  { titleKey: "jobs.positions.maintenance.title", requirementsKey: "jobs.positions.maintenance.requirements", icon: Wrench },
+];
 
 const JobOpenings = () => {
   const { t } = useTranslation();
+  const { toast } = useToast();
 
-  const positions = [
-    {
-      titleKey: "jobs.positions.englishTeacher.title",
-      requirementsKey: "jobs.positions.englishTeacher.requirements",
-      icon: "🇬🇧"
-    },
-    {
-      titleKey: "jobs.positions.germanTeacher.title",
-      requirementsKey: "jobs.positions.germanTeacher.requirements",
-      icon: "🇩🇪"
-    },
-    {
-      titleKey: "jobs.positions.programmingTeacher.title",
-      requirementsKey: "jobs.positions.programmingTeacher.requirements",
-      icon: "💻"
-    },
-    {
-      titleKey: "jobs.positions.admin.title",
-      requirementsKey: "jobs.positions.admin.requirements",
-      icon: "📋"
-    },
-    {
-      titleKey: "jobs.positions.maintenance.title",
-      requirementsKey: "jobs.positions.maintenance.requirements",
-      icon: "🔧"
+  const handleApply = (title: string) => {
+    const mailto = buildMailto(t("jobs.emailSubject", { title }), [
+      `${t("contact.form.name")}: `,
+      `${t("contact.form.phone")}: `,
+      "",
+      `${t("contact.form.message")}: `,
+    ]);
+    window.location.href = mailto;
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(CONTACT_EMAIL).catch(() => undefined);
     }
-  ];
+    toast({
+      title: t("jobs.applyToastTitle"),
+      description: t("jobs.applyToastDesc", { email: CONTACT_EMAIL }),
+    });
+  };
 
   return (
-    <section className="py-24 bg-background">
+    <section className="bg-background py-24 md:py-32">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-up">
-          <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-            {t('jobs.badge')}
-          </Badge>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6">
-            {t('jobs.title')}
-            <span className="block text-primary">{t('jobs.titleHighlight')}</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-            {t('jobs.description')}
-          </p>
-          <div className="flex items-center justify-center space-x-2 text-muted-foreground">
-            <Mail className="w-5 h-5" />
-            <p className="text-lg">
-              {t('jobs.applyEmail')} <a href="mailto:hello@londonschool-ks.com" className="text-primary font-semibold hover:underline">hello@londonschool-ks.com</a>
-            </p>
-          </div>
+        <div className="mb-14 max-w-3xl">
+          <p className="eyebrow mb-4 text-primary/60">{t("jobs.badge")}</p>
+          <SplitTextHeading
+            text={`${t("jobs.title")} ${t("jobs.titleHighlight")}`}
+            className="display-sub font-heading font-extrabold text-foreground"
+          />
+          <motion.p
+            className="mt-6 text-lg text-muted-foreground"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {t("jobs.description")}
+          </motion.p>
         </div>
 
-        {/* Job Openings Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {positions.map((position, index) => (
-            <Card
-              key={position.titleKey}
-              className="premium-card border-0 hover-scale animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardHeader>
-                <div className="text-5xl mb-4">{position.icon}</div>
-                <CardTitle className="font-heading text-xl">
-                  {t(position.titleKey)}
-                </CardTitle>
-                <CardDescription>
-                  {t(position.requirementsKey)}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button className="w-full premium-button text-white font-semibold" asChild>
-                  <a href="mailto:hello@londonschool-ks.com">
-                    <Briefcase className="mr-2 w-4 h-4" />
-                    {t('jobs.applyNow')}
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {/* Open positions — editorial list, not a card grid */}
+        <motion.div
+          className="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-border"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+        >
+          {POSITIONS.map((position) => {
+            const Icon = position.icon;
+            const title = t(position.titleKey);
+            return (
+              <motion.div
+                key={position.titleKey}
+                variants={cardVariant}
+                className="flex flex-col gap-5 border-b border-border p-6 last:border-b-0 sm:flex-row sm:items-center sm:justify-between md:p-8"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/5">
+                    <Icon className="h-5 w-5 text-primary" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-lg font-extrabold text-foreground">
+                      {title}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {t(position.requirementsKey)}
+                    </p>
+                  </div>
+                </div>
+                <MagneticButton className="shrink-0 self-start sm:self-center">
+                  <Button
+                    className="premium-button font-semibold text-white"
+                    onClick={() => handleApply(title)}
+                  >
+                    {t("jobs.applyNow")}
+                  </Button>
+                </MagneticButton>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Prefer email directly */}
+        <motion.div
+          className="mx-auto mt-8 flex max-w-4xl flex-wrap items-center justify-center gap-2 text-center text-muted-foreground"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Mail className="h-4 w-4 text-primary/60" aria-hidden />
+          <span>{t("jobs.applyEmail")}</span>
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline"
+          >
+            {CONTACT_EMAIL}
+            <Copy className="h-3.5 w-3.5" aria-hidden />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

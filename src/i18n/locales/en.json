@@ -1,7 +1,8 @@
 {
   "common": {
     "backHome": "Back to Home",
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "optional": "optional"
   },
   "navigation": {
     "home": "Home",
@@ -524,6 +525,12 @@
       "germanOption": "German Language",
       "programmingOption": "Programming & Technology",
       "logiscoolOption": "Logiscool Coding for Kids",
+      "message": "Message",
+      "messagePlaceholder": "Tell us what you’d like to know…",
+      "send": "Send Message",
+      "emailSubject": "Website inquiry — {{name}}",
+      "successTitle": "Opening your email app…",
+      "successDesc": "We’ve filled in your message — just hit send. Prefer to email directly? Reach us at {{email}}.",
       "sending": "Sending..."
     },
     "info": {
@@ -567,8 +574,9 @@
     "earlyBird": "🎉 Early Bird Offer!",
     "earlyBirdDesc": "Register this month and get 10% off your first course.",
     "submit": "Complete Registration",
-    "success": "Registration Received!",
-    "successDesc": "Thank you for registering! We’ll contact you within 24 hours with more information about your selected program.",
+    "emailSubject": "New registration — {{name}}",
+    "success": "Almost done!",
+    "successDesc": "We’ve opened your email app with your details filled in — just hit send to complete your registration.",
     "age": {
       "kids": "Kids (5–7)",
       "juniors": "Juniors (8–12)",
@@ -582,6 +590,9 @@
     "titleHighlight": "Our Team",
     "description": "We are always looking for new talent to join our team.",
     "applyEmail": "Apply by sending your CV to:",
+    "emailSubject": "Application — {{title}}",
+    "applyToastTitle": "Opening your email app…",
+    "applyToastDesc": "We also copied {{email}} to your clipboard, just in case.",
     "positions": {
       "englishTeacher": {
         "title": "English Teacher",

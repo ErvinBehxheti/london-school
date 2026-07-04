@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { TooltipProvider } from "./components/ui/tooltip";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import ScrollProgress from "@/components/shared/ScrollProgress";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 import { pageTransition } from "@/lib/animations";
@@ -37,7 +36,6 @@ function AnimatedRoutes() {
 
   return (
     <>
-      <ScrollProgress />
       <ScrollToTop />
       <AnimatePresence mode="wait">
         <motion.div

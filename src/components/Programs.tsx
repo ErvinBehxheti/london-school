@@ -116,7 +116,7 @@ const Programs = () => {
                 </div>
 
                 <Link
-                  to="/programs"
+                  to="/contact"
                   className="mt-5 inline-flex w-fit items-center gap-2 font-heading font-bold text-secondary transition-transform duration-300 group-hover:translate-x-1"
                 >
                   {t("programs.explore")}
@@ -145,7 +145,7 @@ const Programs = () => {
             {t("programs.partnership.description")}
           </p>
           <Link
-            to="/programs"
+            to="/contact"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-3 font-heading font-bold text-secondary-foreground transition-transform duration-300 hover:scale-105"
           >
             {t("programs.partnership.exploreKids")}

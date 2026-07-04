@@ -1,265 +1,224 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Award, Heart, Target, Zap, Globe, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import { Award, Globe, Heart, Target, Users, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import SplitTextHeading from "@/components/shared/SplitTextHeading";
+import AnimatedCounter from "@/components/shared/AnimatedCounter";
+import { cardVariant, fadeUp, stagger } from "@/lib/animations";
+
+const TIMELINE = [
+  { year: "2019", key: "2019" },
+  { year: "2021", key: "2021" },
+  { year: "2024", key: "2024" },
+] as const;
+
+const VALUES = [
+  { icon: Target, titleKey: "about.values.excellence.title", descriptionKey: "about.values.excellence.description" },
+  { icon: Heart, titleKey: "about.values.passion.title", descriptionKey: "about.values.passion.description" },
+  { icon: Globe, titleKey: "about.values.global.title", descriptionKey: "about.values.global.description" },
+  { icon: Zap, titleKey: "about.values.innovation.title", descriptionKey: "about.values.innovation.description" },
+];
+
+const IMPACT = [
+  { value: 500, suffix: "+", labelKey: "about.impact.graduates", descriptionKey: "about.impact.graduatesDesc" },
+  { value: 95, suffix: "%", labelKey: "about.impact.successRate", descriptionKey: "about.impact.successRateDesc" },
+  { value: 17, suffix: "", labelKey: "about.impact.teachers", descriptionKey: "about.impact.teachersDesc" },
+  { value: 6, suffix: "", labelKey: "about.impact.years", descriptionKey: "about.impact.yearsDesc" },
+];
 
 const About = () => {
   const { t } = useTranslation();
 
-  const values = [
-    {
-      icon: Target,
-      titleKey: "about.values.excellence.title",
-      descriptionKey: "about.values.excellence.description",
-    },
-    {
-      icon: Heart,
-      titleKey: "about.values.passion.title",
-      descriptionKey: "about.values.passion.description",
-    },
-    {
-      icon: Globe,
-      titleKey: "about.values.global.title",
-      descriptionKey: "about.values.global.description",
-    },
-    {
-      icon: Zap,
-      titleKey: "about.values.innovation.title",
-      descriptionKey: "about.values.innovation.description",
-    },
-  ];
-
-  const achievements = [
-    {
-      number: "500+",
-      labelKey: "about.impact.graduates",
-      descriptionKey: "about.impact.graduatesDesc",
-    },
-    {
-      number: "95%",
-      labelKey: "about.impact.successRate",
-      descriptionKey: "about.impact.successRateDesc",
-    },
-    {
-      number: "17",
-      labelKey: "about.impact.teachers",
-      descriptionKey: "about.impact.teachersDesc",
-    },
-    {
-      number: "6",
-      labelKey: "about.impact.years",
-      descriptionKey: "about.impact.yearsDesc",
-    },
-  ];
-
   return (
-    <section className="py-24 bg-background overflow-x-hidden">
-      <div className="container mx-auto px-6 max-w-7xl">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-up">
-          <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-            {t("about.badge")}
-          </Badge>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6">
-            {t("about.title")}
-            <span className="block text-primary">
-              {t("about.titleHighlight")}
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+    <section className="overflow-x-hidden bg-background py-24 md:py-32">
+      <div className="container mx-auto max-w-7xl px-6">
+        {/* Header */}
+        <div className="mb-20 max-w-3xl">
+          <p className="eyebrow mb-4 text-primary/60">{t("about.badge")}</p>
+          <SplitTextHeading
+            text={`${t("about.title")} ${t("about.titleHighlight")}`}
+            className="display-sub font-heading font-extrabold text-foreground"
+          />
+          <motion.p
+            className="mt-6 text-lg text-muted-foreground"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {t("about.description")}
-          </p>
+          </motion.p>
         </div>
 
         {/* Story / Timeline */}
-        <div className="mb-24">
-          <div className="text-center mb-12 animate-fade-up">
-            <h3 className="font-heading font-bold text-3xl mb-4">
+        <div className="mb-28">
+          <div className="mb-14 max-w-2xl">
+            <h3 className="font-heading text-3xl font-extrabold text-foreground">
               {t("about.history.title")}
             </h3>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="mt-3 text-lg text-muted-foreground">
               {t("about.history.subtitle")}
             </p>
           </div>
 
-          <div className="space-y-8 max-w-4xl mx-auto">
-            {/* 2019 */}
-            <div className="flex gap-6 animate-fade-up">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">2019</span>
-                </div>
-              </div>
-              <div className="flex-1">
-                <h4 className="font-heading font-bold text-xl mb-2">
-                  {t("about.history.2019.title")}
-                </h4>
-                <p className="text-muted-foreground">
-                  {t("about.history.2019.description")}
-                </p>
-              </div>
-            </div>
+          <motion.div
+            className="relative mx-auto max-w-3xl"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            {/* Connecting line */}
+            <div className="absolute bottom-8 left-8 top-8 hidden w-px bg-border md:block" aria-hidden />
 
-            {/* 2021 */}
-            <div
-              className="flex gap-6 animate-fade-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">2021</span>
-                </div>
-              </div>
-              <div className="flex-1">
-                <h4 className="font-heading font-bold text-xl mb-2">
-                  {t("about.history.2021.title")}
-                </h4>
-                <p className="text-muted-foreground">
-                  {t("about.history.2021.description")}
-                </p>
-              </div>
-            </div>
+            <div className="space-y-10">
+              {TIMELINE.map(({ year, key }) => (
+                <motion.div key={key} variants={cardVariant} className="relative flex gap-6">
+                  <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-primary shadow-card">
+                    <span className="font-heading text-base font-bold text-primary-foreground">
+                      {year}
+                    </span>
+                  </div>
+                  <div className="flex-1 pt-3">
+                    <h4 className="font-heading text-xl font-bold text-foreground">
+                      {t(`about.history.${key}.title`)}
+                    </h4>
+                    <p className="mt-2 text-muted-foreground">
+                      {t(`about.history.${key}.description`)}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
 
-            {/* 2024 */}
-            <div
-              className="flex gap-6 animate-fade-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">2024</span>
+              <motion.div variants={cardVariant} className="relative flex gap-6">
+                <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent shadow-card">
+                  <Users className="h-7 w-7 text-accent-foreground" />
                 </div>
-              </div>
-              <div className="flex-1">
-                <h4 className="font-heading font-bold text-xl mb-2">
-                  {t("about.history.2024.title")}
-                </h4>
-                <p className="text-muted-foreground">
-                  {t("about.history.2024.description")}
-                </p>
-              </div>
-            </div>
-
-            {/* Today */}
-            <div
-              className="flex gap-6 animate-fade-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="flex-1 pt-3">
+                  <h4 className="font-heading text-xl font-bold text-foreground">
+                    {t("about.history.today.title")}
+                  </h4>
+                  <p className="mt-2 text-muted-foreground">
+                    {t("about.history.today.description")}
+                  </p>
                 </div>
-              </div>
-              <div className="flex-1">
-                <h4 className="font-heading font-bold text-xl mb-2">
-                  {t("about.history.today.title")}
-                </h4>
-                <p className="text-muted-foreground">
-                  {t("about.history.today.description")}
-                </p>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Mission */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-          <div className="animate-fade-up">
-            <h3 className="font-heading font-bold text-3xl mb-6">
+        <div className="mb-28 grid items-center gap-16 lg:grid-cols-2">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h3 className="font-heading text-3xl font-extrabold text-foreground">
               {t("about.mission.title")}
             </h3>
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="mt-5 text-lg text-muted-foreground">
               {t("about.mission.description")}
             </p>
-            <div className="flex items-center space-x-4">
-              <Award className="w-8 h-8 text-primary" />
-              <span className="font-semibold">
+            <div className="mt-8 flex items-center gap-4">
+              <Award className="h-7 w-7 text-primary" aria-hidden />
+              <span className="font-heading font-semibold text-foreground">
                 {t("about.mission.recognition")}
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="bg-gradient-primary rounded-3xl p-8 text-white">
-              <h4 className="font-heading font-bold text-2xl mb-4">
-                {t("about.whatWeOffer.title")}
-              </h4>
-              <p className="text-white/90 text-lg">
-                {t("about.whatWeOffer.description")}
-              </p>
-            </div>
-          </div>
+          <motion.div
+            className="relative overflow-hidden rounded-3xl bg-gradient-primary p-10 text-ink-foreground"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 80, damping: 16 }}
+          >
+            <span
+              className="pointer-events-none absolute -bottom-6 -right-4 font-heading text-[10rem] font-extrabold leading-none text-ink-foreground/10"
+              aria-hidden
+            >
+              “
+            </span>
+            <h4 className="relative font-heading text-2xl font-extrabold">
+              {t("about.whatWeOffer.title")}
+            </h4>
+            <p className="relative mt-4 text-lg text-ink-foreground/85">
+              {t("about.whatWeOffer.description")}
+            </p>
+          </motion.div>
         </div>
 
         {/* Values */}
-        <div className="mb-24">
-          <div className="text-center mb-12 animate-fade-up">
-            <h3 className="font-heading font-bold text-3xl mb-4">
+        <div className="mb-28">
+          <div className="mb-14 max-w-2xl">
+            <h3 className="font-heading text-3xl font-extrabold text-foreground">
               {t("about.values.title")}
             </h3>
-            <p className="text-lg text-muted-foreground">
+            <p className="mt-3 text-lg text-muted-foreground">
               {t("about.values.description")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => {
-              const IconComponent = value.icon;
+          <motion.div
+            className="grid grid-cols-1 divide-y divide-border rounded-3xl border border-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+          >
+            {VALUES.map((value) => {
+              const Icon = value.icon;
               return (
-                <Card
-                  key={value.titleKey}
-                  className="premium-card border-0 text-center animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="font-heading font-bold text-xl mb-2">
-                      {t(value.titleKey)}
-                    </h4>
-                    <p className="text-muted-foreground">
-                      {t(value.descriptionKey)}
-                    </p>
-                  </CardContent>
-                </Card>
+                <motion.div key={value.titleKey} variants={cardVariant} className="p-8">
+                  <Icon className="h-7 w-7 text-primary" aria-hidden />
+                  <h4 className="mt-5 font-heading text-lg font-bold text-foreground">
+                    {t(value.titleKey)}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {t(value.descriptionKey)}
+                  </p>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
 
         {/* Impact */}
-        <div className="animate-fade-up">
-          <div className="text-center mb-12">
-            <h3 className="font-heading font-bold text-3xl mb-4">
+        <div>
+          <div className="mb-14 max-w-2xl">
+            <h3 className="font-heading text-3xl font-extrabold text-foreground">
               {t("about.impact.title")}
             </h3>
-            <p className="text-lg text-muted-foreground">
+            <p className="mt-3 text-lg text-muted-foreground">
               {t("about.impact.description")}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((a, index) => (
-              <div
-                key={a.labelKey}
-                className="text-center animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="font-heading font-bold text-2xl text-white">
-                    {a.number}
-                  </span>
-                </div>
-                <h4 className="font-heading font-bold text-lg mb-2">
-                  {t(a.labelKey)}
+          <motion.div
+            className="grid grid-cols-2 divide-y divide-border rounded-3xl border border-border lg:grid-cols-4 lg:divide-y-0 lg:divide-x"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+          >
+            {IMPACT.map((item) => (
+              <motion.div key={item.labelKey} variants={cardVariant} className="p-8 text-center">
+                <AnimatedCounter
+                  value={item.value}
+                  suffix={item.suffix}
+                  className="font-heading text-4xl font-extrabold text-primary md:text-5xl"
+                />
+                <h4 className="mt-3 font-heading font-bold text-foreground">
+                  {t(item.labelKey)}
                 </h4>
-                <p className="text-sm text-muted-foreground">
-                  {t(a.descriptionKey)}
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {t(item.descriptionKey)}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

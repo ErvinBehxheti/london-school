@@ -151,7 +151,8 @@ const ActivitiesPage = () => {
       <ActivitySection anchor="bake-sale" i18nKey="bakeAndSale" eventKeys={["bakeAndSale"]} flip />
       <ActivitySection anchor="spelling-bee" i18nKey="spellingBee" eventKeys={["spellingBee"]} />
       <ActivitySection anchor="speed-typing" i18nKey="speedTyping" eventKeys={["speedTyping"]} flip />
-      <ActivitySection anchor="quizzes" i18nKey="quizzes" eventKeys={["quizzes"]} />
+      {/* Quizzes has no photos yet — re-add once we have pictures for the event. */}
+      {/* <ActivitySection anchor="quizzes" i18nKey="quizzes" eventKeys={["quizzes"]} /> */}
 
       {/* Tech Fest — full showstopper treatment */}
       <TechFestFeature />

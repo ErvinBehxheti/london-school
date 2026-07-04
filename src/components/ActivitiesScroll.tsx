@@ -2,13 +2,10 @@ import { useLayoutEffect, useRef } from "react";
 import { ArrowRight, MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type gsap from "gsap";
 import SplitTextHeading from "@/components/shared/SplitTextHeading";
 import { PHOTOS } from "@/data/photos";
 import type { EventKey } from "@/types";
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface ActivityCard {
   eventKey: EventKey;
@@ -22,7 +19,8 @@ const CARDS: ActivityCard[] = [
   { eventKey: "bakeAndSale", i18nKey: "bakeAndSale", anchor: "bake-sale", badgeKey: "activities.bakeAndSale.badge" },
   { eventKey: "spellingBee", i18nKey: "spellingBee", anchor: "spelling-bee", badgeKey: "activities.spellingBee.badge" },
   { eventKey: "speedTyping", i18nKey: "speedTyping", anchor: "speed-typing", badgeKey: "activities.speedTyping.badge" },
-  { eventKey: "quizzes", i18nKey: "quizzes", anchor: "quizzes", badgeKey: "activities.quizzes.badge" },
+  // Quizzes has no photos yet — re-add once we have pictures for the event.
+  // { eventKey: "quizzes", i18nKey: "quizzes", anchor: "quizzes", badgeKey: "activities.quizzes.badge" },
   { eventKey: "rome", i18nKey: "trips", anchor: "trips", badgeKey: "activities.trips.badge" },
   { eventKey: "techFest", i18nKey: "techFest", anchor: "tech-fest", badgeKey: "activities.techFest.badge" },
 ];
@@ -41,24 +39,37 @@ const ActivitiesScroll = () => {
     const track = trackRef.current;
     if (!section || !track) return;
 
-    const mm = gsap.matchMedia();
-    mm.add("(min-width: 1024px)", () => {
-      const distance = () => track.scrollWidth - window.innerWidth;
-      gsap.to(track, {
-        x: () => -distance(),
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => `+=${distance()}`,
-          pin: true,
-          scrub: 1,
-          invalidateOnRefresh: true,
-        },
-      });
-    });
+    let cancelled = false;
+    let mm: gsap.MatchMedia | undefined;
 
-    return () => mm.revert();
+    Promise.all([import("gsap"), import("gsap/ScrollTrigger")]).then(
+      ([{ default: gsap }, { ScrollTrigger }]) => {
+        if (cancelled) return;
+        gsap.registerPlugin(ScrollTrigger);
+
+        mm = gsap.matchMedia();
+        mm.add("(min-width: 1024px)", () => {
+          const distance = () => track.scrollWidth - window.innerWidth;
+          gsap.to(track, {
+            x: () => -distance(),
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top top",
+              end: () => `+=${distance()}`,
+              pin: true,
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+        });
+      }
+    );
+
+    return () => {
+      cancelled = true;
+      mm?.revert();
+    };
   }, []);
 
   return (

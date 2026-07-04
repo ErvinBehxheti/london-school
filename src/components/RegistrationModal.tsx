@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Sparkles } from "lucide-react";
+import { buildMailto } from "@/lib/mailto";
 
 interface RegistrationModalProps {
   open: boolean;
@@ -35,22 +36,29 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
     program: "",
     age: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: t("registration.success"),
-        description: t("registration.successDesc"),
-      });
-      setIsSubmitting(false);
-      onOpenChange(false);
-      setFormData({ name: "", email: "", phone: "", program: "", age: "" });
-    }, 1000);
+    const mailto = buildMailto(
+      t("registration.emailSubject", { name: formData.name }),
+      [
+        `${t("contact.form.name")}: ${formData.name}`,
+        `${t("contact.form.email")}: ${formData.email}`,
+        `${t("contact.form.phone")}: ${formData.phone}`,
+        `${t("registration.ageGroup")}: ${t(`registration.age.${formData.age}`)}`,
+        formData.program &&
+          `${t("contact.form.program")}: ${t(`contact.form.${formData.program}Option`)}`,
+      ]
+    );
+    window.location.href = mailto;
+
+    toast({
+      title: t("registration.success"),
+      description: t("registration.successDesc"),
+    });
+    onOpenChange(false);
+    setFormData({ name: "", email: "", phone: "", program: "", age: "" });
   };
 
   return (
@@ -162,9 +170,8 @@ const RegistrationModal = ({ open, onOpenChange }: RegistrationModalProps) => {
           <Button
             type="submit"
             className="w-full premium-button text-white font-semibold"
-            disabled={isSubmitting}
           >
-            {isSubmitting ? t("contact.form.sending") : t("registration.submit")}
+            {t("registration.submit")}
           </Button>
         </form>
       </DialogContent>

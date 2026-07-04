@@ -1,7 +1,8 @@
 {
   "common": {
     "backHome": "Kthehu te Fillimi",
-    "loading": "Duke u ngarkuar…"
+    "loading": "Duke u ngarkuar…",
+    "optional": "opsionale"
   },
   "navigation": {
     "home": "Fillimi",
@@ -524,6 +525,12 @@
       "germanOption": "Gjuha Gjermane",
       "programmingOption": "Programim & Teknologji",
       "logiscoolOption": "Logiscool Kodim për Fëmijë",
+      "message": "Mesazhi",
+      "messagePlaceholder": "Na tregoni çfarë dëshironi të dini…",
+      "send": "Dërgo Mesazhin",
+      "emailSubject": "Kërkesë nga faqja e internetit — {{name}}",
+      "successTitle": "Aplikacioni juaj i email-it po hapet…",
+      "successDesc": "E kemi plotësuar mesazhin tuaj — thjesht klikoni Dërgo. Preferoni të na shkruani direkt? Na kontaktoni në {{email}}.",
       "sending": "Duke dërguar..."
     },
     "info": {
@@ -567,8 +574,9 @@
     "earlyBird": "🎉 Ofertë e Hershme!",
     "earlyBirdDesc": "Regjistrohuni këtë muaj dhe merrni 10% zbritje në regjistrimin e kursit tuaj të parë.",
     "submit": "Përfundo Regjistrimin",
-    "success": "Regjistrimi u Pranua!",
-    "successDesc": "Faleminderit për regjistrimin! Do t'ju kontaktojmë brenda 24 orëve me më shumë informacion rreth programit tuaj të zgjedhur.",
+    "emailSubject": "Regjistrim i ri — {{name}}",
+    "success": "Gati, pothuajse!",
+    "successDesc": "Kemi hapur aplikacionin tuaj të email-it me të dhënat e plotësuara — thjesht klikoni Dërgo për të përfunduar regjistrimin.",
     "age": {
       "kids": "Fëmijë (5–7)",
       "juniors": "Juniorë (8–12)",
@@ -582,6 +590,9 @@
     "titleHighlight": "Ekipin Tonë",
     "description": "Jemi gjithmonë në kërkim të talenteve të reja për të bashkuar ekipin tonë.",
     "applyEmail": "Apliko duke dërguar CV në:",
+    "emailSubject": "Aplikim — {{title}}",
+    "applyToastTitle": "Aplikacioni juaj i email-it po hapet…",
+    "applyToastDesc": "Gjithashtu kopjuam {{email}} në clipboard, për çdo rast.",
     "positions": {
       "englishTeacher": {
         "title": "Mësimdhënës i Gjuhës Angleze",
